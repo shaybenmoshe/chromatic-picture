@@ -1264,11 +1264,11 @@ key "Bal10"
 
 \begin_layout Proposition
 Let 
-\begin_inset Formula $\mathcal{T}_{E}=\ker E_{*}=\left\{ A\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\mid E_{*}\left(A\right)=0\right\} $
+\begin_inset Formula $\mathcal{T}_{E}=\ker E_{*}=\left\{ X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\mid E_{*}\left(X\right)=0\right\} $
 \end_inset
 
  (equivalently 
-\begin_inset Formula $A\otimes E\simeq0$
+\begin_inset Formula $X\otimes E\simeq0$
 \end_inset
 
 ) i.e.
@@ -1434,12 +1434,16 @@ The inclusion is proper
 \begin_inset Formula $H_{*}\left(X;\mathbb{F}_{p}\right)$
 \end_inset
 
- is bounded, thus for large enough 
+ is bounded (since 
+\begin_inset Formula $X$
+\end_inset
+
+ is a finite spectrum,) thus for large enough 
 \begin_inset Formula $n$
 \end_inset
 
 , by AHSS we have 
-\begin_inset Formula $K\left(n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
 \end_inset
 
 , i.e.
@@ -1447,8 +1451,9 @@ The inclusion is proper
 \begin_inset Formula $X$
 \end_inset
 
- has finite type, thus 
-\begin_inset Formula $\mathcal{C}_{\geq\infty}=\left\{ 0\right\} $
+ has finite type.
+ We conclude that 
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
 \end_inset
 
 .
@@ -1515,7 +1520,7 @@ For
 \end_inset
 
  by Kunneth we have 
-\begin_inset Formula $K\left(n-1\right)_{*}\left(X\otimes Y\right)=K\left(n-1\right)_{*}\left(X\right)\otimes K\left(n-1\right)_{*}\left(Y\right)$
+\begin_inset Formula $K\left(p,n-1\right)_{*}\left(X\otimes Y\right)=K\left(p,n-1\right)_{*}\left(X\right)\otimes K\left(p,n-1\right)_{*}\left(Y\right)$
 \end_inset
 
 .
@@ -1589,21 +1594,116 @@ The chromatic picture can be described for all
 Morava E-Theory
 \end_layout
 
+\begin_layout Standard
+??????????????????????????
+\end_layout
+
 \begin_layout Subsection
 Further Consequences
 \end_layout
 
 \begin_layout Standard
-???????????????? Chromatic convergence theorem (Lurie 32) ??????????????
+?????????????????????????
 \end_layout
 
 \begin_layout Standard
-???????????????? Smash product theorem - Chromatic Square (Lurie 23, and
- 30, 31) ?????????????
+???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
 \end_layout
 
 \begin_layout Standard
 ???????????????? Arithmetic Square ???????????
+\end_layout
+
+\begin_layout Subsubsection
+The Chromatic Convergence Theorem
+\end_layout
+
+\begin_layout Standard
+Can be found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 32"
+key "Lur"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+For each 
+\begin_inset Formula $n$
+\end_inset
+
+ we have a map 
+\begin_inset Formula $L_{E\left(p,n+1\right)}X\to L_{E\left(p,n\right)}X$
+\end_inset
+
+, thus we can form 
+\emph on
+the chromatic tower
+\emph default
+ 
+\begin_inset Formula $\dotsc\to L_{E\left(p,2\right)}X\to L_{E\left(p,1\right)}X\to L_{E\left(p,0\right)}X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Chromatic Convergence Theorem
+\end_layout
+
+\end_inset
+
+The limit of the chromatic tower is 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The Chromatic Square
+\end_layout
+
+\begin_layout Standard
+Can be found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 23"
+key "Lur"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Chromatic Square
+\end_layout
+
+\end_inset
+
+There is a pullback diagram:
+\begin_inset Formula 
+\[
+\xymatrix{L_{E\left(p,n\right)}X\ar[r]\ar[d] & L_{K\left(p,n\right)}X\ar[d]\\
+L_{E\left(p,n-1\right)}X\ar[r] & L_{E\left(p,n-1\right)}L_{K\left(p,n\right)}X
+}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

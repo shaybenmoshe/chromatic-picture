@@ -1,3 +1,5 @@
 *.lyx~
 refs.bib.bak
 texput.log
+
+*.lyx#
