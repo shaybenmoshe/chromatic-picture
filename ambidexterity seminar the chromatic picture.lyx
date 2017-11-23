@@ -87,115 +87,12 @@ theorems-ams
 Ambidexterity Seminar – The Chromatic Picture
 \end_layout
 
-\begin_layout Section
-A Quick Reminder to the Category of Spectra
+\begin_layout Author
+Shay Ben Moshe
 \end_layout
 
-\begin_layout Standard
-?????????????? Do we need the following ??????????????
-\end_layout
-
-\begin_layout Definition
-A 
-\emph on
-prespectrum
-\emph default
- 
-\begin_inset Formula $E\in\mathrm{Sp}$
-\end_inset
-
- is series of CW-spaces 
-\begin_inset Formula $E_{n}\in\mathcal{S}$
-\end_inset
-
- together with structure maps 
-\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
-\end_inset
-
-.
- A 
-\emph on
-map of degree 
-\begin_inset Formula $r$
-\end_inset
-
-
-\emph default
- between two spectra is 
-\begin_inset Formula $f_{n}:E_{n}\to F_{n-r}$
-\end_inset
-
-, s.t.
- the structure maps commute with it.
- These form a category, called the 
-\emph on
-category of spectra
-\emph default
-, denoted by 
-\begin_inset Formula $\mathrm{Sp}$
-\end_inset
-
-.
- We will work mainly with 
-\emph on
-finite spectra
-\emph default
-, in which each 
-\begin_inset Formula $E_{n}$
-\end_inset
-
- is a finite CW-space, which are exactly the compact objects, and we denote
- their full subcategory by 
-\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Example*
-Given a space 
-\begin_inset Formula $X\in\mathcal{S}$
-\end_inset
-
-, we can define the 
-\emph on
-suspension spectrum
-\emph default
-, by 
-\begin_inset Formula $E_{n}=\Sigma^{n}X$
-\end_inset
-
-, and 
-\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
-\end_inset
-
- the identity.
- In particular, we have the 
-\emph on
-sphere spectrum
-\emph default
- 
-\begin_inset Formula $\mathbb{S}$
-\end_inset
-
-.
- ???????????? Is this an embedding ???????????
-\end_layout
-
-\begin_layout Example*
-?????????????? 
-\begin_inset Formula $\left[E,F\right]$
-\end_inset
-
-, homotopy groups, cohomolgy, 
-\begin_inset Formula $K\left(A,n\right)$
-\end_inset
-
-, 
-\begin_inset Formula $HA$
-\end_inset
-
-, symmetric monoidal ???????????????
+\begin_layout Date
+December 03, 2017
 \end_layout
 
 \begin_layout Section
@@ -666,7 +563,8 @@ The Chromatic Picture
 \end_layout
 
 \begin_layout Standard
-We concentrate at a single prime 
+Similiarly to the analysis in algebra/algebraic geometry, we are going to
+ concentrate at a single prime 
 \begin_inset Formula $p$
 \end_inset
 
@@ -684,42 +582,8 @@ reconstruct the space
 \begin_inset Quotes erd
 \end_inset
 
- by applying this mechanism.
- We remind ourselves that the compact objects are finite spectra, and therefore
- we want to know what is 
-\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-???????????????? Morava E-Theory.
- There is a claim that 
-\begin_inset Formula $E\left(p,n\right)_{*}\left(X\right)=0$
-\end_inset
-
- iff 
-\begin_inset Formula $K\left(p,m\right)_{*}\left(X\right)=0$
-\end_inset
-
- for 
-\begin_inset Formula $0\leq m\leq n$
-\end_inset
-
- but this is equiv to 
-\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
-\end_inset
-
- ?????????????
-\end_layout
-
-\begin_layout Standard
-???????????????? Chromatic convergence theorem (Lurie 32) ??????????????
-\end_layout
-
-\begin_layout Standard
-???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+ by applying this mechanism, and then try to use this decomposition.
+ We remind ourselves that the compact objects are finite spectra.
 \end_layout
 
 \begin_layout Subsection
@@ -858,7 +722,7 @@ If
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
--module for some 
+-module for unique 
 \begin_inset Formula $p$
 \end_inset
 
@@ -867,14 +731,14 @@ If
 \end_inset
 
 .
- In that sense it is uniquely determined.
+ In that sense 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ is uniquely determined.
 \end_layout
 
 \end_deeper
-\begin_layout Fact
-????????????? Is this a good characterization ???????
-\end_layout
-
 \begin_layout Fact
 We also take 
 \begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
@@ -884,11 +748,62 @@ We also take
 \end_layout
 
 \begin_layout Example*
-??????????? Something about 
+Remember that 
+\begin_inset Formula $K$
+\end_inset
+
+ (regular 
+\begin_inset Formula $K$
+\end_inset
+
+-theory) has 
+\begin_inset Formula $\pi_{*}\left(K\right)=\mathbb{Z}\left[\beta^{\pm1}\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $\deg\beta=2$
+\end_inset
+
+.
+ Taking 
+\begin_inset Formula $K/p$
+\end_inset
+
+ (i.e.
+ mod 
+\begin_inset Formula $p$
+\end_inset
+
+,) we get a spectrum with homotopy groups 
+\begin_inset Formula $\mathbb{F}_{p}\left[\beta^{\pm1}\right]$
+\end_inset
+
+ thus by the above it is a module over 
 \begin_inset Formula $K\left(p,1\right)$
 \end_inset
 
- ?????????????
+.
+ Note that 
+\begin_inset Formula $\deg v_{1}=2\left(p-1\right)$
+\end_inset
+
+ while 
+\begin_inset Formula $\deg\beta=2$
+\end_inset
+
+, thus 
+\begin_inset Formula $K/p$
+\end_inset
+
+ is a direct sum of 
+\begin_inset Formula $p-1$
+\end_inset
+
+ copies of 
+\begin_inset Formula $K\left(p,1\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1646,13 +1561,49 @@ For
 .
 \end_layout
 
-\begin_layout Standard
-???????????????????? Should I say something about the global picture, and
- mention 
-\begin_inset Formula $\mathrm{Sp}_{\mathrm{tor}}^{\mathrm{fin}}$
+\begin_layout Remark*
+The chromatic picture can be described for all 
+\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
 \end_inset
 
- ???????????????????
+ at once, which has all the primes above for each 
+\begin_inset Formula $p$
+\end_inset
+
+ with the above closed sets, except that all 
+\begin_inset Formula $\mathcal{C}_{\geq1}$
+\end_inset
+
+ for different 
+\begin_inset Formula $p$
+\end_inset
+
+ are the same (
+\begin_inset Formula $H\mathbb{Q}$
+\end_inset
+
+-acyclics.)
+\end_layout
+
+\begin_layout Subsection
+Morava E-Theory
+\end_layout
+
+\begin_layout Subsection
+Further Consequences
+\end_layout
+
+\begin_layout Standard
+???????????????? Chromatic convergence theorem (Lurie 32) ??????????????
+\end_layout
+
+\begin_layout Standard
+???????????????? Smash product theorem - Chromatic Square (Lurie 23, and
+ 30, 31) ?????????????
+\end_layout
+
+\begin_layout Standard
+???????????????? Arithmetic Square ???????????
 \end_layout
 
 \begin_layout Standard
