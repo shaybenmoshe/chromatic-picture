@@ -563,7 +563,7 @@ The Chromatic Picture
 \end_layout
 
 \begin_layout Standard
-Similiarly to the analysis in algebra/algebraic geometry, we are going to
+Similarly to the analysis in algebra/algebraic geometry, we are going to
  concentrate at a single prime 
 \begin_inset Formula $p$
 \end_inset
@@ -1603,15 +1603,12 @@ Further Consequences
 \end_layout
 
 \begin_layout Standard
-?????????????????????????
+The ideas above lead to the idea of studying spectra height-by-height, and
+ investigate further the connection between Morava E-Theory and Morava K-Theory.
 \end_layout
 
 \begin_layout Standard
 ???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
-\end_layout
-
-\begin_layout Standard
-???????????????? Arithmetic Square ???????????
 \end_layout
 
 \begin_layout Subsubsection
@@ -1704,6 +1701,20 @@ L_{E\left(p,n-1\right)}X\ar[r] & L_{E\left(p,n-1\right)}L_{K\left(p,n\right)}X
 \end_inset
 
 
+\end_layout
+
+\begin_layout Remark
+The chromatic square resembles the 
+\emph on
+arithmetic square
+\emph default
+, which allows gluing data from different primes to get the original space.
+ However, the pieces are not exactly the 
+\begin_inset Formula $p$
+\end_inset
+
+-localizations, so we don't present it here.
+ These theorems go under the name fracture theorems.
 \end_layout
 
 \begin_layout Standard
