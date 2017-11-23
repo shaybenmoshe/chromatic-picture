@@ -1,0 +1,1670 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{eucal}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.3cm
+\topmargin 2.5cm
+\rightmargin 2.3cm
+\bottommargin 2.5cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ambidexterity Seminar – The Chromatic Picture
+\end_layout
+
+\begin_layout Section
+A Quick Reminder to the Category of Spectra
+\end_layout
+
+\begin_layout Standard
+?????????????? Do we need the following ??????????????
+\end_layout
+
+\begin_layout Definition
+A 
+\emph on
+prespectrum
+\emph default
+ 
+\begin_inset Formula $E\in\mathrm{Sp}$
+\end_inset
+
+ is series of CW-spaces 
+\begin_inset Formula $E_{n}\in\mathcal{S}$
+\end_inset
+
+ together with structure maps 
+\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
+\end_inset
+
+.
+ A 
+\emph on
+map of degree 
+\begin_inset Formula $r$
+\end_inset
+
+
+\emph default
+ between two spectra is 
+\begin_inset Formula $f_{n}:E_{n}\to F_{n-r}$
+\end_inset
+
+, s.t.
+ the structure maps commute with it.
+ These form a category, called the 
+\emph on
+category of spectra
+\emph default
+, denoted by 
+\begin_inset Formula $\mathrm{Sp}$
+\end_inset
+
+.
+ We will work mainly with 
+\emph on
+finite spectra
+\emph default
+, in which each 
+\begin_inset Formula $E_{n}$
+\end_inset
+
+ is a finite CW-space, which are exactly the compact objects, and we denote
+ their full subcategory by 
+\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Given a space 
+\begin_inset Formula $X\in\mathcal{S}$
+\end_inset
+
+, we can define the 
+\emph on
+suspension spectrum
+\emph default
+, by 
+\begin_inset Formula $E_{n}=\Sigma^{n}X$
+\end_inset
+
+, and 
+\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
+\end_inset
+
+ the identity.
+ In particular, we have the 
+\emph on
+sphere spectrum
+\emph default
+ 
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+.
+ ???????????? Is this an embedding ???????????
+\end_layout
+
+\begin_layout Example*
+?????????????? 
+\begin_inset Formula $\left[E,F\right]$
+\end_inset
+
+, homotopy groups, cohomolgy, 
+\begin_inset Formula $K\left(A,n\right)$
+\end_inset
+
+, 
+\begin_inset Formula $HA$
+\end_inset
+
+, symmetric monoidal ???????????????
+\end_layout
+
+\begin_layout Section
+Motivation – Hopkins-Neeman and Balmer's Spectrum
+\end_layout
+
+\begin_layout Standard
+Two short introductions to the topic are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Iye,Mur"
+
+\end_inset
+
+ (note that they use the language of triangular categories, rather than
+ 
+\begin_inset Formula $\infty$
+\end_inset
+
+-categories.) In what follows, 
+\begin_inset Formula $R$
+\end_inset
+
+ is noetherian ring, 
+\begin_inset Formula $X=\mathrm{Spec}\left(R\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathrm{Ch}\left(X\right)$
+\end_inset
+
+ is the symmetric monoidal stable 
+\begin_inset Formula $\infty$
+\end_inset
+
+-category of chain complexes over 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem*
+Can we recover 
+\begin_inset Formula $X$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathrm{Ch}\left(X\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+The first partial answer to this question is given at 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hop,Nee"
+
+\end_inset
+
+, which we state now.
+\end_layout
+
+\begin_layout Definition
+A 
+\emph on
+perfect complex
+\emph default
+ is a complex that is quasi-isomorphic to a bounded complex of finite projective
+ modules.
+ These are the compact objects in the category, so that they can actually
+ be defined categorically.
+ Denote by 
+\begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
+\end_inset
+
+ the full subcategory of perfect complexes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be a symmetric monoidal stable 
+\begin_inset Formula $\infty$
+\end_inset
+
+-category.
+ A full subcategory 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is 
+\emph on
+thick
+\emph default
+ if:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0\in\mathcal{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+let 
+\begin_inset Formula $a\overset{f}{\to}b\to c$
+\end_inset
+
+ cofiber sequence, if two out of 
+\begin_inset Formula $\left\{ a,b,c\right\} $
+\end_inset
+
+ are in 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+, then so is the third (remember that cofiber and fiber sequences are the
+ same)
+\end_layout
+
+\begin_layout Enumerate
+it is closed under retracts
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Take 
+\begin_inset Formula $R=\mathbb{Z}$
+\end_inset
+
+, thus 
+\begin_inset Formula $\mathrm{Ch}\left(X\right)$
+\end_inset
+
+ are chain complexes of abelian groups, and 
+\begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
+\end_inset
+
+ are chain complexes with finitely-many non-zero entries, each of which
+ is 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ to some power.
+ Let 
+\begin_inset Formula $K_{\bullet}\in\mathrm{Ch}\left(X\right)$
+\end_inset
+
+, and define 
+\begin_inset Formula $\mathcal{T}_{K_{\bullet}}=\left\{ A_{\bullet}\mid A_{\bullet}\otimes K_{\bullet}=0\right\} $
+\end_inset
+
+.
+ Clearly 
+\begin_inset Formula $0\in\mathcal{T}_{K_{\bullet}}$
+\end_inset
+
+, in a pushout where 
+\begin_inset Formula $3$
+\end_inset
+
+ are 
+\begin_inset Formula $0$
+\end_inset
+
+ the fourth is 
+\begin_inset Formula $0$
+\end_inset
+
+, and if 
+\begin_inset Formula $A_{\bullet}\to B_{\bullet}\to A_{\bullet}$
+\end_inset
+
+ is the identity and 
+\begin_inset Formula $B_{\bullet}\otimes K_{\bullet}=0$
+\end_inset
+
+ then 
+\begin_inset Formula $A_{\bullet}\otimes K_{\bullet}\to0\to A_{\bullet}\otimes K_{\bullet}$
+\end_inset
+
+ is the identity thus 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\mathcal{T}_{K_{\bullet}}$
+\end_inset
+
+ is thick.
+\end_layout
+
+\begin_layout Definition
+A subset 
+\begin_inset Formula $V\subseteq X$
+\end_inset
+
+ is called 
+\emph on
+specialization closed
+\emph default
+ if it is a union of closed sets.
+ Equivalently, if 
+\begin_inset Formula $\mathfrak{p}\subseteq\mathfrak{q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathfrak{p}\in V$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathfrak{q}\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Hopkins–Neeman
+\end_layout
+
+\end_inset
+
+ There is an inclusion-preserving bijection of sets
+\begin_inset Formula 
+\[
+\left\{ \textrm{Thick subcategories of \ensuremath{\mathrm{Ch}_{\mathrm{perf}}\left(X\right)}}\right\} \rightleftarrows\left\{ \textrm{Specialization closed subsets of \ensuremath{X}}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+They actually give an explicit way to define the functions, but we omit
+ it for the sake of brevity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+The theorem was improved in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tho"
+
+\end_inset
+
+ to any quasi-compact quasi-separated scheme 
+\begin_inset Formula $X$
+\end_inset
+
+, and compact objects in its derived category.
+\end_layout
+
+\begin_layout Standard
+Later on, in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bal04,Bal10"
+
+\end_inset
+
+ the result is improved further.
+\end_layout
+
+\begin_layout Definition
+A thick subcategory 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is an 
+\emph on
+ideal
+\emph default
+ if 
+\begin_inset Formula $a\in\mathcal{T},b\in\mathcal{C}\implies a\otimes b\in\mathcal{T}$
+\end_inset
+
+.
+ Furthermore, it is a 
+\emph on
+prime ideal
+\emph default
+ if it is a proper subcategory, and 
+\begin_inset Formula $a\otimes b\in\mathcal{T}\implies a\in\mathcal{T}\textrm{ or }b\in\mathcal{T}$
+\end_inset
+
+.
+ The 
+\emph on
+spectrum
+\emph default
+ of the category is defined similarly to the classical spectrum of a ring,
+ 
+\begin_inset Formula $\mathrm{Spc}\left(\mathcal{C}\right)=\left\{ \mathcal{P}\textrm{ prime ideal}\right\} $
+\end_inset
+
+, and for any family of objects 
+\begin_inset Formula $S\subseteq\mathcal{C}$
+\end_inset
+
+ we define 
+\begin_inset Formula $V\left(S\right)=\left\{ \mathcal{P}\in\mathrm{Spc}\left(\mathcal{C}\right)\mid S\cap\mathcal{P}=\emptyset\right\} $
+\end_inset
+
+, and these are the closed subsets of the 
+\emph on
+Zariski topology
+\emph default
+ on 
+\begin_inset Formula $\mathrm{Spc}\left(\mathcal{C}\right)$
+\end_inset
+
+.
+ We also denote 
+\begin_inset Formula $\mathrm{supp}\left(a\right)=V\left(\left\{ a\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Balmer
+\end_layout
+
+\end_inset
+
+ There is a homeomorphism 
+\begin_inset Formula $X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\mathfrak{p}\mapsto\mathcal{P}=\left\{ M_{\bullet}\mid\left(M_{\bullet}\right)_{\mathfrak{p}}=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+This was actually upgraded to an isomorphism of locally-ringed spaces.
+\end_layout
+
+\begin_layout Example
+Continuing the case 
+\begin_inset Formula $R=\mathbb{Z}$
+\end_inset
+
+.
+ We've seen that 
+\begin_inset Formula $\mathcal{T}_{K_{\bullet}}$
+\end_inset
+
+ is thick.
+ Note that it is also an ideal, since 
+\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}\otimes K_{\bullet}=A_{\bullet}\otimes0=0$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+ iff it is only 
+\begin_inset Formula $q$
+\end_inset
+
+-torsion for 
+\begin_inset Formula $q\neq p$
+\end_inset
+
+, and we can prove that it is indeed a prime ideal, and similarly for 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+.
+ Clearly, if 
+\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+ then 
+\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+, thus any 
+\begin_inset Formula $S$
+\end_inset
+
+ that doesn't intersect 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+ doesn't intersect any 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+, so a closed set that contains 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+ includes all the others.
+ Indeed by theorem we have 
+\begin_inset Formula $p\mathbb{Z}\mapsto\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{p\mathbb{Z}}=0\right\} =\left\{ A_{\bullet}\mid A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}=0\right\} =\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+, and similarly 
+\begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(2\right)}},\mathcal{T}_{\mathbb{Z}_{\left(3\right)}},\dotsc,\mathcal{T}_{\mathbb{Q}}\right\} $
+\end_inset
+
+.
+ Note that the support of an element is all the prime ideals to which it
+ 
+\emph on
+does not
+\emph default
+ belong, e.g.
+ 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{supp}\left(\mathbb{F}_{p}\right)$
+\end_inset
+
+ iff 
+\begin_inset Formula $\mathbb{F}_{p}\otimes\mathbb{Z}_{\left(q\right)}\neq0$
+\end_inset
+
+ which is only when 
+\begin_inset Formula $q=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+The Chromatic Picture
+\end_layout
+
+\begin_layout Standard
+We concentrate at a single prime 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Although the category of spectra doesn't arise as the corresponding category
+ for a scheme or a similar gadget, we can still try to 
+\begin_inset Quotes eld
+\end_inset
+
+reconstruct the space 
+\begin_inset Formula $X$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ by applying this mechanism.
+ We remind ourselves that the compact objects are finite spectra, and therefore
+ we want to know what is 
+\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+???????????????? Morava E-Theory.
+ There is a claim that 
+\begin_inset Formula $E\left(p,n\right)_{*}\left(X\right)=0$
+\end_inset
+
+ iff 
+\begin_inset Formula $K\left(p,m\right)_{*}\left(X\right)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq m\leq n$
+\end_inset
+
+ but this is equiv to 
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
+\end_inset
+
+ ?????????????
+\end_layout
+
+\begin_layout Standard
+???????????????? Chromatic convergence theorem (Lurie 32) ??????????????
+\end_layout
+
+\begin_layout Standard
+???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+\end_layout
+
+\begin_layout Subsection
+Morava K-Theory
+\end_layout
+
+\begin_layout Standard
+A good reference for this part is 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lectures 22, 24"
+key "Lur"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be an evenly graded ring.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ is called a 
+\emph on
+graded field
+\emph default
+ if every non-zero homogenus is invertible, equivalently it is a field 
+\begin_inset Formula $F$
+\end_inset
+
+ concentrated at degree 
+\begin_inset Formula $0$
+\end_inset
+
+, or 
+\begin_inset Formula $F$
+\end_inset
+
+
+\begin_inset Formula $\left[\beta^{\pm1}\right]$
+\end_inset
+
+ for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ of positive even degree.
+ An (
+\begin_inset Formula $A_{\infty}$
+\end_inset
+
+-)ring spectrum 
+\begin_inset Formula $E$
+\end_inset
+
+ is a 
+\emph on
+field
+\emph default
+ if 
+\begin_inset Formula $\pi_{*}E$
+\end_inset
+
+ is a field.
+\end_layout
+
+\begin_layout Proposition
+A field 
+\begin_inset Formula $E$
+\end_inset
+
+ has Kunneth, i.e.
+ 
+\begin_inset Formula $E_{*}\left(X\otimes Y\right)\cong E_{*}\left(X\right)\otimes_{\pi_{*}E}E_{*}\left(Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+For each prime 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $n=1,2,\dotsc$
+\end_inset
+
+, there exists a spectrum called 
+\emph on
+Morava K-Theory of height 
+\begin_inset Formula $n$
+\end_inset
+
+
+\emph default
+, denoted by 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+, which has the following properties:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\pi_{*}K\left(p,n\right)\cong\mathbb{F}_{p}\left[v_{n}^{\pm1}\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $\deg v_{n}=2\left(p^{n}-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+It is a field (and in particular, (
+\begin_inset Formula $A_{\infty}$
+\end_inset
+
+-)ring spectrum.)
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a field, then it has the structure of a 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+-module for some 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ In that sense it is uniquely determined.
+\end_layout
+
+\end_deeper
+\begin_layout Fact
+????????????? Is this a good characterization ???????
+\end_layout
+
+\begin_layout Fact
+We also take 
+\begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+??????????? Something about 
+\begin_inset Formula $K\left(p,1\right)$
+\end_inset
+
+ ?????????????
+\end_layout
+
+\begin_layout Subsection
+Localization
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $p$
+\end_inset
+
+-localization of an Abelian Group
+\end_layout
+
+\begin_layout Definition
+An abelian group 
+\begin_inset Formula $C$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+-acyclic
+\emph default
+, if it has only 
+\begin_inset Formula $q$
+\end_inset
+
+-torsion for 
+\begin_inset Formula $q\neq p$
+\end_inset
+
+, equivalently 
+\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes C=0$
+\end_inset
+
+.
+ An abelian group 
+\begin_inset Formula $B$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+-local
+\emph default
+, if all other primes are invertible (i.e.
+ that the map 
+\begin_inset Formula $a\mapsto qa$
+\end_inset
+
+ is an isomorphism for 
+\begin_inset Formula $q\neq p$
+\end_inset
+
+,) equivalently 
+\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes B=B$
+\end_inset
+
+, equivalently 
+\begin_inset Formula $\hom\left(C,B\right)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p$
+\end_inset
+
+-acyclic 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $p$
+\end_inset
+
+-local groups form a full subcategory 
+\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an abelian group, its 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+-localization
+\emph default
+ is a 
+\begin_inset Formula $p$
+\end_inset
+
+-local abelian group together with a map 
+\begin_inset Formula $\varphi:A\to A_{\left(p\right)}$
+\end_inset
+
+ that is universal.
+ I.e.
+ s.t.
+ for each map to a 
+\begin_inset Formula $p$
+\end_inset
+
+-local group 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, there exists a unique 
+\begin_inset Formula $\tilde{f}:A_{\left(p\right)}\to B$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f=\tilde{f}\varphi$
+\end_inset
+
+.
+ In other word, the 
+\begin_inset Formula $p$
+\end_inset
+
+-localization is the left adjoint to the inclusion 
+\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
+\end_inset
+
+ (and the map is 
+\begin_inset Formula $\mathrm{id}\in\hom\left(A_{\left(p\right)},A_{\left(p\right)}\right)\cong\hom\left(A,A_{\left(p\right)}\right)$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Example*
+Given the abelian group 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ we have 
+\begin_inset Formula $\mathbb{Z}_{\left(p\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $p$
+\end_inset
+
+-localization of a Spectrum
+\end_layout
+
+\begin_layout Standard
+Analogously and using the case of abelian groups.
+\end_layout
+
+\begin_layout Definition
+A spectrum 
+\begin_inset Formula $Y$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+-local
+\emph default
+, if 
+\begin_inset Formula $\pi_{*}\left(Y\right)$
+\end_inset
+
+ is a 
+\begin_inset Formula $p$
+\end_inset
+
+-local abelian group.
+ The 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra form a full subcategory 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a spectrum, its 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+-localization
+\emph default
+ is a 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectrum together with a map 
+\begin_inset Formula $\varphi:X\to X_{\left(p\right)}$
+\end_inset
+
+ that is universal.
+ I.e.
+ s.t.
+ for each map to a 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectrum 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+, there exists a map 
+\begin_inset Formula $\tilde{f}:X_{\left(p\right)}\to Y$
+\end_inset
+
+, unique up to homotopy, s.t.
+ 
+\begin_inset Formula $f=\tilde{f}\varphi$
+\end_inset
+
+.
+ In other word, the 
+\begin_inset Formula $p$
+\end_inset
+
+-localization is the left adjoint to the inclusion 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
+\end_inset
+
+ (and the map is 
+\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(X_{\left(p\right)},X_{\left(p\right)}\right)\cong\mathrm{Map}\left(X,X_{\left(p\right)}\right)$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Example*
+Given the spectrum 
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+ we have 
+\begin_inset Formula $\mathbb{S}_{\left(p\right)}$
+\end_inset
+
+, the 
+\begin_inset Formula $p$
+\end_inset
+
+-local sphere.
+\end_layout
+
+\begin_layout Remark*
+This discussion carries word-for-word for finite spectra to give 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $E$
+\end_inset
+
+-localization of a Spectrum
+\end_layout
+
+\begin_layout Definition
+A spectrum 
+\begin_inset Formula $Z$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $E$
+\end_inset
+
+-acyclic
+\emph default
+, if 
+\begin_inset Formula $E_{*}\left(Z\right)=\pi_{*}\left(E\otimes Z\right)=0$
+\end_inset
+
+, equivalently 
+\begin_inset Formula $E\otimes Z\simeq0$
+\end_inset
+
+.
+ A spectrum 
+\begin_inset Formula $Y$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $E$
+\end_inset
+
+-local
+\emph default
+, if 
+\begin_inset Formula $\left[Z,Y\right]_{*}=0$
+\end_inset
+
+, equivalently 
+\begin_inset Formula $\mathrm{Map}\left(Z,Y\right)\simeq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p$
+\end_inset
+
+-acyclic 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $E$
+\end_inset
+
+-local spectra form a full subcategory 
+\begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a a spectrum, its 
+\emph on
+
+\begin_inset Formula $E$
+\end_inset
+
+-localization
+\emph default
+ is a 
+\begin_inset Formula $E$
+\end_inset
+
+-local spectrum together with a map 
+\begin_inset Formula $\varphi:X\to L_{E}X$
+\end_inset
+
+ that is universal.
+ I.e.
+ s.t.
+ for each map to a 
+\begin_inset Formula $E$
+\end_inset
+
+-local spectrum 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+, there exists a unique 
+\begin_inset Formula $\tilde{f}:L_{E}X\to Y$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f=\tilde{f}\varphi$
+\end_inset
+
+.
+ In other word, the 
+\begin_inset Formula $E$
+\end_inset
+
+-localization is the left adjoint to the inclusion 
+\begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
+\end_inset
+
+ (and the map is 
+\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Subsection
+The Thick Subcategory Theorem and 
+\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many of the results below can be found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 26"
+key "Lur"
+
+\end_inset
+
+.
+ The Balmer spectrum can be found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "corollary 9.5"
+key "Bal10"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+Let 
+\begin_inset Formula $\mathcal{T}_{E}=\ker E_{*}=\left\{ A\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\mid E_{*}\left(A\right)=0\right\} $
+\end_inset
+
+ (equivalently 
+\begin_inset Formula $A\otimes E\simeq0$
+\end_inset
+
+) i.e.
+ the 
+\begin_inset Formula $E$
+\end_inset
+
+-acyclics, then 
+\begin_inset Formula $\mathcal{T}_{E}$
+\end_inset
+
+ is thick.
+\end_layout
+
+\begin_layout Proof
+Let be a cofiber sequence 
+\begin_inset Formula $X'\to X\to X''$
+\end_inset
+
+, then we get a LES in 
+\begin_inset Formula $E_{*}$
+\end_inset
+
+ homology, in which every space is wrapped by the two others, therefore
+ if two are 
+\begin_inset Formula $0$
+\end_inset
+
+, then so is the third:
+\begin_inset Formula 
+\[
+\cdots\to E_{m-1}\left(X''\right)\to E_{m}\left(X'\right)\to E_{m}\left(X\right)\to E_{m}\left(X''\right)\to E_{m+1}\left(X'\right)\to\cdots
+\]
+
+\end_inset
+
+For a retract 
+\begin_inset Formula $i:X\to Y,r:Y\to X,ri=\mathrm{id}_{X}$
+\end_inset
+
+, we get 
+\begin_inset Formula $E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(X\right)$
+\end_inset
+
+, where the middle is 
+\begin_inset Formula $0$
+\end_inset
+
+, and the composition is identity, thus 
+\begin_inset Formula $E_{m}\left(X\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This leads us to the following definition.
+\end_layout
+
+\begin_layout Definition
+We define 
+\begin_inset Formula $\mathcal{C}_{\geq n}=\mathcal{T}_{K\left(p,n-1\right)}$
+\end_inset
+
+, the 
+\begin_inset Formula $K\left(p,n-1\right)$
+\end_inset
+
+-acyclics (equivalently 
+\begin_inset Formula $A\otimes K\left(p,n-1\right)\simeq0$
+\end_inset
+
+.) By the above it is thick.
+ Also, 
+\begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}_{\geq\infty}=\left\{ 0\right\} $
+\end_inset
+
+, which are trivially thick.
+\end_layout
+
+\begin_layout Proposition
+If 
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
+\end_inset
+
+ then 
+\begin_inset Formula $K\left(p,n-1\right)_{*}\left(X\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+We say that a spectrum is of 
+\emph on
+type 
+\begin_inset Formula $n$
+\end_inset
+
+
+\emph default
+ (possibly 
+\begin_inset Formula $\infty$
+\end_inset
+
+,) if the first non-zero Morava K-Theory is 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+\begin_inset Formula $\mathcal{C}_{\geq n}$
+\end_inset
+
+ is the full subcategory of finite 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra of type 
+\begin_inset Formula $\geq n$
+\end_inset
+
+.
+ Thus clearly 
+\begin_inset Formula $\mathcal{C}_{\geq n+1}\subseteq\mathcal{C}_{\geq n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact*
+The inclusion is proper 
+\begin_inset Formula $\mathcal{C}_{\geq n+1}\subsetneq\mathcal{C}_{\geq n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula $X\simeq0$
+\end_inset
+
+ iff 
+\begin_inset Formula $H_{*}\left(X;\mathbb{Z}\right)=0$
+\end_inset
+
+ iff 
+\begin_inset Formula $H_{*}\left(X;\mathbb{F}_{p}\right)=0$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ is not contractible, then 
+\begin_inset Formula $H_{*}\left(X;\mathbb{F}_{p}\right)$
+\end_inset
+
+ is bounded, thus for large enough 
+\begin_inset Formula $n$
+\end_inset
+
+, by AHSS we have 
+\begin_inset Formula $K\left(n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ has finite type, thus 
+\begin_inset Formula $\mathcal{C}_{\geq\infty}=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Thick Subcategory Theorem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is a thick subcategory of 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathcal{T}=\mathcal{C}_{\geq n}$
+\end_inset
+
+ for some 
+\begin_inset Formula $n=0,1,2,\dotsc,\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+The proof relies on a major theorem called the Nilpotence Theorem.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\mathcal{C}_{\geq n}$
+\end_inset
+
+ is a prime ideal (note that 
+\begin_inset Formula $\mathcal{C}_{\geq0}$
+\end_inset
+
+ is not a proper subcategory, thus only for 
+\begin_inset Formula $n=1,2,\dotsc,\infty$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ by Kunneth we have 
+\begin_inset Formula $K\left(n-1\right)_{*}\left(X\otimes Y\right)=K\left(n-1\right)_{*}\left(X\right)\otimes K\left(n-1\right)_{*}\left(Y\right)$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $X\in\mathcal{C}_{\geq n}$
+\end_inset
+
+, i.e.
+ the homology vanishes, then so does the homology of 
+\begin_inset Formula $X\otimes Y$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $X\otimes Y\in\mathcal{C}_{\geq n}$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathcal{C}_{\geq n}$
+\end_inset
+
+ is an ideal.
+ If 
+\begin_inset Formula $X\otimes Y\in\mathcal{C}_{\geq n}$
+\end_inset
+
+ then the homology of the product vanishes, therefore one in the right side
+ must vanish (they are graded vector spaces,) so 
+\begin_inset Formula $\mathcal{C}_{\geq n}$
+\end_inset
+
+ is a prime ideal.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\right)=\left\{ \mathcal{C}_{\geq1},\mathcal{C}_{\geq2},\dotsc,\mathcal{C}_{\geq\infty}\right\} $
+\end_inset
+
+, and the closed subsets are 
+\begin_inset Formula $\left\{ \mathcal{C}_{\geq k},\mathcal{C}_{\geq k+1},\dotsc,\mathcal{C}_{\geq\infty}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+???????????????????? Should I say something about the global picture, and
+ mention 
+\begin_inset Formula $\mathrm{Sp}_{\mathrm{tor}}^{\mathrm{fin}}$
+\end_inset
+
+ ???????????????????
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "refs"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
