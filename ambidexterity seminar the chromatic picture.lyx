@@ -276,7 +276,8 @@ Take
 \begin_inset Formula $0$
 \end_inset
 
-, and if 
+ ?????????????????????? not sure, localization is left so sends pushout
+ to pushout ???????????, and if 
 \begin_inset Formula $A_{\bullet}\to B_{\bullet}\to A_{\bullet}$
 \end_inset
 
@@ -664,6 +665,10 @@ A field
  has Kunneth, i.e.
  
 \begin_inset Formula $E_{*}\left(X\otimes Y\right)\cong E_{*}\left(X\right)\otimes_{\pi_{*}E}E_{*}\left(Y\right)$
+\end_inset
+
+ for any spectra 
+\begin_inset Formula $X,Y$
 \end_inset
 
 .
@@ -1297,7 +1302,8 @@ Let be a cofiber sequence
 \begin_inset Formula $0$
 \end_inset
 
-, then so is the third:
+, then so is the third ??????????????????? can we use the same argument
+ from complexes ????????????????:
 \begin_inset Formula 
 \[
 \cdots\to E_{m-1}\left(X''\right)\to E_{m}\left(X'\right)\to E_{m}\left(X\right)\to E_{m}\left(X''\right)\to E_{m+1}\left(X'\right)\to\cdots
@@ -1354,7 +1360,11 @@ We define
 \end_layout
 
 \begin_layout Proposition
-If 
+For 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+, if 
 \begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
 \end_inset
 
@@ -1363,6 +1373,28 @@ If
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Remark*
+This result is not true for any spectrum (e.g.
+ for 
+\begin_inset Formula $H\mathbb{Q}$
+\end_inset
+
+ whose 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ doesn't vanish at 
+\begin_inset Formula $n=0$
+\end_inset
+
+ but does at 
+\begin_inset Formula $n=1$
+\end_inset
+
+,) and the fact that it doesn't vanish is important and has to do with Morava
+ E-Theory and the way different levels glue.
 \end_layout
 
 \begin_layout Definition
@@ -1599,7 +1631,7 @@ Morava E-Theory
 \end_layout
 
 \begin_layout Subsection
-Further Consequences
+Further Results
 \end_layout
 
 \begin_layout Standard
@@ -1609,22 +1641,6 @@ The ideas above lead to the idea of studying spectra height-by-height, and
 
 \begin_layout Standard
 ???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
-\end_layout
-
-\begin_layout Subsubsection
-The Chromatic Convergence Theorem
-\end_layout
-
-\begin_layout Standard
-Can be found at 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "lecture 32"
-key "Lur"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Definition
@@ -1652,7 +1668,15 @@ the chromatic tower
 status open
 
 \begin_layout Plain Layout
-Chromatic Convergence Theorem
+Chromatic Convergence Theorem 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 32"
+key "Lur"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1664,20 +1688,11 @@ The limit of the chromatic tower is
 .
 \end_layout
 
-\begin_layout Subsubsection
-The Chromatic Square
-\end_layout
-
 \begin_layout Standard
-Can be found at 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "lecture 23"
-key "Lur"
-
+\begin_inset Separator plain
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Theorem
@@ -1685,7 +1700,15 @@ key "Lur"
 status open
 
 \begin_layout Plain Layout
-Chromatic Square
+Chromatic Square 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 23"
+key "Lur"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1708,7 +1731,7 @@ The chromatic square resembles the
 \emph on
 arithmetic square
 \emph default
-, which allows gluing data from different primes to get the original space.
+, which allows gluing data from different primes to get the original spectrum.
  However, the pieces are not exactly the 
 \begin_inset Formula $p$
 \end_inset
