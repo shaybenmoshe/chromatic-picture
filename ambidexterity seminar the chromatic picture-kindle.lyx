@@ -89,115 +89,12 @@ theorems-ams
 Ambidexterity Seminar – The Chromatic Picture
 \end_layout
 
-\begin_layout Section
-A Quick Reminder to the Category of Spectra
+\begin_layout Author
+Shay Ben Moshe
 \end_layout
 
-\begin_layout Standard
-?????????????? Do we need the following ??????????????
-\end_layout
-
-\begin_layout Definition
-A 
-\series bold
-prespectrum
-\series default
- 
-\begin_inset Formula $E\in\mathrm{Sp}$
-\end_inset
-
- is series of CW-spaces 
-\begin_inset Formula $E_{n}\in\mathcal{S}$
-\end_inset
-
- together with structure maps 
-\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
-\end_inset
-
-.
- A 
-\series bold
-map of degree 
-\begin_inset Formula $r$
-\end_inset
-
-
-\series default
- between two spectra is 
-\begin_inset Formula $f_{n}:E_{n}\to F_{n-r}$
-\end_inset
-
-, s.t.
- the structure maps commute with it.
- These form a category, called the 
-\series bold
-category of spectra
-\series default
-, denoted by 
-\begin_inset Formula $\mathrm{Sp}$
-\end_inset
-
-.
- We will work mainly with 
-\series bold
-finite spectra
-\series default
-, in which each 
-\begin_inset Formula $E_{n}$
-\end_inset
-
- is a finite CW-space, which are exactly the compact objects, and we denote
- their full subcategory by 
-\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Example*
-Given a space 
-\begin_inset Formula $X\in\mathcal{S}$
-\end_inset
-
-, we can define the 
-\series bold
-suspension spectrum
-\series default
-, by 
-\begin_inset Formula $E_{n}=\Sigma^{n}X$
-\end_inset
-
-, and 
-\begin_inset Formula $\Sigma E_{n}\to E_{n+1}$
-\end_inset
-
- the identity.
- In particular, we have the 
-\series bold
-sphere spectrum
-\series default
- 
-\begin_inset Formula $\mathbb{S}$
-\end_inset
-
-.
- ???????????? Is this an embedding ???????????
-\end_layout
-
-\begin_layout Example*
-?????????????? 
-\begin_inset Formula $\left[E,F\right]$
-\end_inset
-
-, homotopy groups, cohomolgy, 
-\begin_inset Formula $K\left(A,n\right)$
-\end_inset
-
-, 
-\begin_inset Formula $HA$
-\end_inset
-
-, symmetric monoidal ???????????????
+\begin_layout Date
+December 03, 2017
 \end_layout
 
 \begin_layout Section
@@ -265,9 +162,9 @@ key "Hop,Nee"
 
 \begin_layout Definition
 A 
-\series bold
+\emph on
 perfect complex
-\series default
+\emph default
  is a complex that is quasi-isomorphic to a bounded complex of finite projective
  modules.
  These are the compact objects in the category, so that they can actually
@@ -301,9 +198,9 @@ Let
 \end_inset
 
  is 
-\series bold
+\emph on
 thick
-\series default
+\emph default
  if:
 \end_layout
 
@@ -342,16 +239,15 @@ Take
 \begin_inset Formula $R=\mathbb{Z}$
 \end_inset
 
-, thus 
+, then 
 \begin_inset Formula $\mathrm{Ch}\left(X\right)$
 \end_inset
 
- are chain complexs of abelian groups, and 
+ is chain complexes of abelian groups, and 
 \begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
- are chain complexes with finitely-many non-zero entries, each of which
- is 
+ are those with finitely-many non-zero entries, each of which is 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
@@ -361,7 +257,7 @@ Take
 \end_inset
 
 , and define 
-\begin_inset Formula $\mathcal{T}_{K_{\bullet}}=\left\{ A_{\bullet}\mid A_{\bullet}\otimes K_{\bullet}=0\right\} $
+\begin_inset Formula $\mathcal{T}_{K_{\bullet}}=\left\{ A_{\bullet}\in\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\mid A_{\bullet}\otimes K_{\bullet}=0\right\} $
 \end_inset
 
 .
@@ -369,19 +265,18 @@ Take
 \begin_inset Formula $0\in\mathcal{T}_{K_{\bullet}}$
 \end_inset
 
-, in a pushout where 
-\begin_inset Formula $3$
-\end_inset
-
- are 
+.
+ Since tensor is left, it sends pushout to pushout ????????? not sure ???????,
+ and three are 
 \begin_inset Formula $0$
 \end_inset
 
- the fourth is 
+ so the fourth is 
 \begin_inset Formula $0$
 \end_inset
 
-, and if 
+.
+ Lastly, if 
 \begin_inset Formula $A_{\bullet}\to B_{\bullet}\to A_{\bullet}$
 \end_inset
 
@@ -390,11 +285,15 @@ Take
 \end_inset
 
  then 
-\begin_inset Formula $A_{\bullet}\otimes K_{\bullet}\to0\to A_{\bullet}\otimes K_{\bullet}$
+\begin_inset Formula $\mathrm{id}_{A_{\bullet}\otimes K_{\bullet}}$
 \end_inset
 
- is the identity thus 
+ factors through 
 \begin_inset Formula $0$
+\end_inset
+
+, thus 
+\begin_inset Formula $A_{\bullet}\otimes K_{\bullet}=0$
 \end_inset
 
 .
@@ -411,9 +310,9 @@ A subset
 \end_inset
 
  is called 
-\series bold
+\emph on
 specialization closed
-\series default
+\emph default
  if it is a union of closed sets.
  Equivalently, if 
 \begin_inset Formula $\mathfrak{p}\subseteq\mathfrak{q}$
@@ -495,27 +394,27 @@ A thick subcategory
 \end_inset
 
  is an 
-\series bold
+\emph on
 ideal
-\series default
+\emph default
  if 
 \begin_inset Formula $a\in\mathcal{T},b\in\mathcal{C}\implies a\otimes b\in\mathcal{T}$
 \end_inset
 
 .
  Furthermore, it is a 
-\series bold
+\emph on
 prime ideal
-\series default
+\emph default
  if it is a proper subcategory, and 
 \begin_inset Formula $a\otimes b\in\mathcal{T}\implies a\in\mathcal{T}\textrm{ or }b\in\mathcal{T}$
 \end_inset
 
 .
  The 
-\series bold
+\emph on
 spectrum
-\series default
+\emph default
  of the category is defined similarly to the classical spectrum of a ring,
  
 \begin_inset Formula $\mathrm{Spc}\left(\mathcal{C}\right)=\left\{ \mathcal{P}\textrm{ prime ideal}\right\} $
@@ -530,9 +429,9 @@ spectrum
 \end_inset
 
 , and these are the closed subsets of the 
-\series bold
+\emph on
 Zariski topology
-\series default
+\emph default
  on 
 \begin_inset Formula $\mathrm{Spc}\left(\mathcal{C}\right)$
 \end_inset
@@ -555,7 +454,7 @@ Balmer
 
 \end_inset
 
- There is a homemorphism 
+ There is a homeomorphism 
 \begin_inset Formula $X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
 \end_inset
 
@@ -598,22 +497,41 @@ Continuing the case
 \begin_inset Formula $q\neq p$
 \end_inset
 
-, and we can prove that it is indeed an ideal, this includes 
+, and we can prove that it is indeed a prime ideal, and similarly for 
 \begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
 .
- The latter clearly includes the former, thus any 
+ Clearly, if 
+\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+ then 
+\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+, thus any 
 \begin_inset Formula $S$
 \end_inset
 
- that doesn't intersect it doesn't intersect the rest, so if it is in a
- closed set then so are the rest.
+ that doesn't intersect 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+ doesn't intersect any 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+, so a closed set that contains 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
+\end_inset
+
+ includes all the others.
  Indeed by theorem we have 
 \begin_inset Formula $p\mathbb{Z}\mapsto\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{p\mathbb{Z}}=0\right\} =\left\{ A_{\bullet}\mid A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}=0\right\} =\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
 \end_inset
 
-, including 
+, and similarly 
 \begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
@@ -625,24 +543,23 @@ Continuing the case
 .
  Note that the support of an element is all the prime ideals to which it
  
-\series bold
+\emph on
 does not
-\series default
+\emph default
  belong, e.g.
  
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\in\mathrm{supp}\left(A_{\bullet}\right)$
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{supp}\left(\mathbb{F}_{p}\right)$
 \end_inset
 
  iff 
-\begin_inset Formula $A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}\neq0$
+\begin_inset Formula $\mathbb{F}_{p}\otimes\mathbb{Z}_{\left(q\right)}\neq0$
 \end_inset
 
-, i.e.
- if it has 
-\begin_inset Formula $p$
+ which is only when 
+\begin_inset Formula $q=p$
 \end_inset
 
--torsion.
+.
 \end_layout
 
 \begin_layout Section
@@ -650,7 +567,8 @@ The Chromatic Picture
 \end_layout
 
 \begin_layout Standard
-We concentrate at a single prime 
+Similarly to the analysis in algebra/algebraic geometry, we are going to
+ concentrate at a single prime 
 \begin_inset Formula $p$
 \end_inset
 
@@ -668,42 +586,8 @@ reconstruct the space
 \begin_inset Quotes erd
 \end_inset
 
- by applying this mechanism.
- We remind ourselves that the compact objects are finite spectra, and therefore
- we want to know what is 
-\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-???????????????? Morava E-Theory.
- There is a claim that 
-\begin_inset Formula $E\left(p,n\right)_{*}\left(X\right)=0$
-\end_inset
-
- iff 
-\begin_inset Formula $K\left(p,m\right)_{*}\left(X\right)=0$
-\end_inset
-
- for 
-\begin_inset Formula $0\leq m\leq n$
-\end_inset
-
- but this is equiv to 
-\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
-\end_inset
-
- ?????????????
-\end_layout
-
-\begin_layout Standard
-???????????????? Chromatic convergence theorem (Lurie 32) ??????????????
-\end_layout
-
-\begin_layout Standard
-???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+ by applying this mechanism, and then try to use this decomposition.
+ We remind ourselves that the compact objects are finite spectra.
 \end_layout
 
 \begin_layout Subsection
@@ -733,9 +617,9 @@ Let
 \end_inset
 
  is called a 
-\series bold
+\emph on
 graded field
-\series default
+\emph default
  if every non-zero homogenus is invertible, equivalently it is a field 
 \begin_inset Formula $F$
 \end_inset
@@ -766,9 +650,9 @@ graded field
 \end_inset
 
  is a 
-\series bold
+\emph on
 field
-\series default
+\emph default
  if 
 \begin_inset Formula $\pi_{*}E$
 \end_inset
@@ -786,12 +670,11 @@ A field
 \begin_inset Formula $E_{*}\left(X\otimes Y\right)\cong E_{*}\left(X\right)\otimes_{\pi_{*}E}E_{*}\left(Y\right)$
 \end_inset
 
-.
- 
-\end_layout
+ for any spectra 
+\begin_inset Formula $X,Y$
+\end_inset
 
-\begin_layout Proof
-This follows by the fact 
+.
 \end_layout
 
 \begin_layout Fact
@@ -804,13 +687,13 @@ For each prime
 \end_inset
 
 , there exists a spectrum called 
-\series bold
+\emph on
 Morava K-Theory of height 
 \begin_inset Formula $n$
 \end_inset
 
 
-\series default
+\emph default
 , denoted by 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
@@ -847,7 +730,7 @@ If
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
--module for some 
+-module for unique 
 \begin_inset Formula $p$
 \end_inset
 
@@ -856,14 +739,14 @@ If
 \end_inset
 
 .
- In that sense it is uniquely determined.
+ In that sense 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ is uniquely determined.
 \end_layout
 
 \end_deeper
-\begin_layout Fact
-????????????? Is this a good characterization ???????
-\end_layout
-
 \begin_layout Fact
 We also take 
 \begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
@@ -873,11 +756,62 @@ We also take
 \end_layout
 
 \begin_layout Example*
-??????????? Something about 
+Remember that 
+\begin_inset Formula $K$
+\end_inset
+
+ (regular 
+\begin_inset Formula $K$
+\end_inset
+
+-theory) has 
+\begin_inset Formula $\pi_{*}\left(K\right)=\mathbb{Z}\left[\beta^{\pm1}\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $\deg\beta=2$
+\end_inset
+
+.
+ Taking 
+\begin_inset Formula $K/p$
+\end_inset
+
+ (i.e.
+ mod 
+\begin_inset Formula $p$
+\end_inset
+
+,) we get a spectrum with homotopy groups 
+\begin_inset Formula $\mathbb{F}_{p}\left[\beta^{\pm1}\right]$
+\end_inset
+
+ thus by the above it is a module over 
 \begin_inset Formula $K\left(p,1\right)$
 \end_inset
 
- ?????????????
+.
+ Note that 
+\begin_inset Formula $\deg v_{1}=2\left(p-1\right)$
+\end_inset
+
+ while 
+\begin_inset Formula $\deg\beta=2$
+\end_inset
+
+, thus 
+\begin_inset Formula $K/p$
+\end_inset
+
+ is a direct sum of 
+\begin_inset Formula $p-1$
+\end_inset
+
+ copies of 
+\begin_inset Formula $K\left(p,1\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -897,13 +831,13 @@ An abelian group
 \end_inset
 
  is called 
-\series bold
+\emph on
 
 \begin_inset Formula $p$
 \end_inset
 
 -acyclic
-\series default
+\emph default
 , if it has only 
 \begin_inset Formula $q$
 \end_inset
@@ -922,13 +856,13 @@ An abelian group
 \end_inset
 
  is called 
-\series bold
+\emph on
 
 \begin_inset Formula $p$
 \end_inset
 
 -local
-\series default
+\emph default
 , if all other primes are invertible (i.e.
  that the map 
 \begin_inset Formula $a\mapsto qa$
@@ -979,13 +913,13 @@ Let
 \end_inset
 
  be an abelian group, its 
-\series bold
+\emph on
 
 \begin_inset Formula $p$
 \end_inset
 
 -localization
-\series default
+\emph default
  is a 
 \begin_inset Formula $p$
 \end_inset
@@ -1059,13 +993,13 @@ A spectrum
 \end_inset
 
  is called 
-\series bold
+\emph on
 
 \begin_inset Formula $p$
 \end_inset
 
 -local
-\series default
+\emph default
 , if 
 \begin_inset Formula $\pi_{*}\left(Y\right)$
 \end_inset
@@ -1099,13 +1033,13 @@ Let
 \end_inset
 
  be a spectrum, its 
-\series bold
+\emph on
 
 \begin_inset Formula $p$
 \end_inset
 
 -localization
-\series default
+\emph default
  is a 
 \begin_inset Formula $p$
 \end_inset
@@ -1175,7 +1109,7 @@ This discussion carries word-for-word for finite spectra to give
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -localization of a Spectrum
@@ -1187,19 +1121,19 @@ A spectrum
 \end_inset
 
  is called 
-\series bold
+\emph on
 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -acyclic
-\series default
+\emph default
 , if 
-\begin_inset Formula $K\left(p,n\right)_{*}\left(Z\right)=\pi_{*}\left(K\left(p,n\right)\otimes Z\right)=0$
+\begin_inset Formula $E_{*}\left(Z\right)=\pi_{*}\left(E\otimes Z\right)=0$
 \end_inset
 
 , equivalently 
-\begin_inset Formula $K\left(p,n\right)\otimes Z\simeq0$
+\begin_inset Formula $E\otimes Z\simeq0$
 \end_inset
 
 .
@@ -1208,13 +1142,13 @@ A spectrum
 \end_inset
 
  is called 
-\series bold
+\emph on
 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -local
-\series default
+\emph default
 , if 
 \begin_inset Formula $\left[Z,Y\right]_{*}=0$
 \end_inset
@@ -1233,11 +1167,11 @@ A spectrum
 
 .
  The 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -local spectra form a full subcategory 
-\begin_inset Formula $\mathrm{Sp}_{K\left(p,n\right)}\subset\mathrm{Sp}$
+\begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
 \end_inset
 
 .
@@ -1256,26 +1190,26 @@ Let
 \end_inset
 
  be a a spectrum, its 
-\series bold
+\emph on
 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -localization
-\series default
+\emph default
  is a 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -local spectrum together with a map 
-\begin_inset Formula $\varphi:X\to L_{K\left(p,n\right)}X$
+\begin_inset Formula $\varphi:X\to L_{E}X$
 \end_inset
 
  that is universal.
  I.e.
  s.t.
  for each map to a 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -local spectrum 
@@ -1283,7 +1217,7 @@ Let
 \end_inset
 
 , there exists a unique 
-\begin_inset Formula $\tilde{f}:L_{K\left(p,n\right)}X\to Y$
+\begin_inset Formula $\tilde{f}:L_{E}X\to Y$
 \end_inset
 
  s.t.
@@ -1293,15 +1227,15 @@ Let
 
 .
  In other word, the 
-\begin_inset Formula $K\left(p,n\right)$
+\begin_inset Formula $E$
 \end_inset
 
 -localization is the left adjoint to the inclusion 
-\begin_inset Formula $\mathrm{Sp}_{K\left(p,n\right)}\subset\mathrm{Sp}$
+\begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
 \end_inset
 
  (and the map is 
-\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{K\left(p,n\right)}X,L_{K\left(p,n\right)}X\right)\cong\mathrm{Map}\left(X,L_{K\left(p,n\right)}X\right)$
+\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
 \end_inset
 
 .)
@@ -1337,7 +1271,108 @@ key "Bal10"
 \end_layout
 
 \begin_layout Proposition
-If 
+Let 
+\begin_inset Formula $\mathcal{T}_{E}=\ker E_{*}=\left\{ X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\mid E_{*}\left(X\right)=0\right\} $
+\end_inset
+
+ (equivalently 
+\begin_inset Formula $X\otimes E\simeq0$
+\end_inset
+
+) i.e.
+ the 
+\begin_inset Formula $E$
+\end_inset
+
+-acyclics, then 
+\begin_inset Formula $\mathcal{T}_{E}$
+\end_inset
+
+ is thick.
+\end_layout
+
+\begin_layout Proof
+Clearly 
+\begin_inset Formula $0\in\mathcal{T}_{E}$
+\end_inset
+
+.
+ Let be a cofiber sequence 
+\begin_inset Formula $X\to Y\to Z$
+\end_inset
+
+, then we get a LES in 
+\begin_inset Formula $E_{*}$
+\end_inset
+
+ homology, in which every space is wrapped by the two others, therefore
+ if two are 
+\begin_inset Formula $0$
+\end_inset
+
+, then so is the third ??????????????????? can we use the same argument
+ from complexes ????????????????:
+\begin_inset Formula 
+\[
+\cdots\to E_{m-1}\left(Z\right)\to E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(Z\right)\to E_{m+1}\left(X\right)\to\cdots
+\]
+
+\end_inset
+
+For a retract 
+\begin_inset Formula $X\to Y\to Y$
+\end_inset
+
+, we get 
+\begin_inset Formula $E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(X\right)$
+\end_inset
+
+, where the middle is 
+\begin_inset Formula $0$
+\end_inset
+
+, and the composition is identity, thus 
+\begin_inset Formula $E_{m}\left(X\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This leads us to the following definition.
+\end_layout
+
+\begin_layout Definition
+We define 
+\begin_inset Formula $\mathcal{C}_{\geq n}=\mathcal{T}_{K\left(p,n-1\right)}$
+\end_inset
+
+, the 
+\begin_inset Formula $K\left(p,n-1\right)$
+\end_inset
+
+-acyclics (equivalently 
+\begin_inset Formula $X\otimes K\left(p,n-1\right)\simeq0$
+\end_inset
+
+.) By the above it is thick.
+ Also, 
+\begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}_{\geq\infty}=\left\{ 0\right\} $
+\end_inset
+
+, which are trivially thick.
+\end_layout
+
+\begin_layout Proposition
+For 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+, if 
 \begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0$
 \end_inset
 
@@ -1348,21 +1383,71 @@ If
 .
 \end_layout
 
+\begin_layout Remark*
+This result is not true for any spectrum (e.g.
+ for 
+\begin_inset Formula $H\mathbb{Q}$
+\end_inset
+
+ whose 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ doesn't vanish at 
+\begin_inset Formula $n=0$
+\end_inset
+
+ but does at 
+\begin_inset Formula $n=1$
+\end_inset
+
+,) and the fact that it doesn't vanish is important and has to do with Morava
+ E-Theory and the way different levels glue.
+\end_layout
+
 \begin_layout Definition
 We say that a spectrum is of 
-\series bold
+\emph on
 type 
 \begin_inset Formula $n$
 \end_inset
 
 
-\series default
+\emph default
  (possibly 
 \begin_inset Formula $\infty$
 \end_inset
 
-), if the first non-zero Morava K-Theory is 
+,) if the first non-zero Morava K-Theory is 
 \begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+\begin_inset Formula $\mathcal{C}_{\geq n}$
+\end_inset
+
+ is the full subcategory of finite 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra of type 
+\begin_inset Formula $\geq n$
+\end_inset
+
+.
+ Thus clearly 
+\begin_inset Formula $\mathcal{C}_{\geq n+1}\subseteq\mathcal{C}_{\geq n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact*
+The inclusion is proper 
+\begin_inset Formula $\mathcal{C}_{\geq n+1}\subsetneq\mathcal{C}_{\geq n}$
 \end_inset
 
 .
@@ -1389,12 +1474,16 @@ type
 \begin_inset Formula $H_{*}\left(X;\mathbb{F}_{p}\right)$
 \end_inset
 
- is bounded, thus for large enough 
+ is bounded (since 
+\begin_inset Formula $X$
+\end_inset
+
+ is a finite spectrum,) thus for large enough 
 \begin_inset Formula $n$
 \end_inset
 
 , by AHSS we have 
-\begin_inset Formula $K\left(n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
 \end_inset
 
 , i.e.
@@ -1403,121 +1492,8 @@ type
 \end_inset
 
  has finite type.
-\end_layout
-
-\begin_layout Definition
-\begin_inset Formula $\mathcal{C}_{\geq n}$
-\end_inset
-
- is the subcategory of finite 
-\begin_inset Formula $p$
-\end_inset
-
--local spectra of type 
-\begin_inset Formula $\geq n$
-\end_inset
-
- (
-\begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathcal{C}_{\geq\infty}=\left\{ 0\right\} $
-\end_inset
-
-.) This is the same as having 
-\begin_inset Formula $K\left(p,m\right)_{*}\left(X\right)=0$
-\end_inset
-
- for 
-\begin_inset Formula $m<n$
-\end_inset
-
-, or by the above the same as being 
-\begin_inset Formula $K\left(p,n-1\right)$
-\end_inset
-
--acyclic.
- Clearly 
-\begin_inset Formula $\mathcal{C}_{\geq n}\subseteq\mathcal{C}_{\geq n+1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Fact*
-The inclusion is proper 
-\begin_inset Formula $\mathcal{C}_{\geq n}\subsetneq\mathcal{C}_{\geq n+1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Formula $\mathcal{C}_{\geq n}$
-\end_inset
-
- is thick.
- ?????????????? The proof below works for the category of 
-\begin_inset Formula $E$
-\end_inset
-
--acyclic for any 
-\begin_inset Formula $E$
-\end_inset
-
- ??????????
-\end_layout
-
-\begin_layout Proof
-Clear for 
-\begin_inset Formula $\mathcal{C}_{\geq0}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathcal{C}_{\geq\infty}$
-\end_inset
-
-.
- Let be a cofiber sequence 
-\begin_inset Formula $X'\to X\to X''$
-\end_inset
-
-, then we get a LES in 
-\begin_inset Formula $K\left(p,n-1\right)_{*}$
-\end_inset
-
- homology, in which every space is wrapped by the two others, therefore
- if two are 
-\begin_inset Formula $0$
-\end_inset
-
-, then so is the third (
-\begin_inset Formula $E=K\left(p,n-1\right)$
-\end_inset
-
-):
-\begin_inset Formula 
-\[
-\cdots\to E_{m-1}\left(X''\right)\to E_{m}\left(X'\right)\to E_{m}\left(X\right)\to E_{m}\left(X''\right)\to E_{m+1}\left(X'\right)\to\cdots
-\]
-
-\end_inset
-
-For a retract 
-\begin_inset Formula $i:X\to Y,r:Y\to X,ri=\mathrm{id}_{X}$
-\end_inset
-
-, we get 
-\begin_inset Formula $K\left(p,n-1\right)_{m}\left(X\right)\to K\left(p,n-1\right)_{m}\left(Y\right)\to K\left(p,n-1\right)_{m}\left(X\right)$
-\end_inset
-
-, where the middle is 
-\begin_inset Formula $0$
-\end_inset
-
-, and the composition is identity, thus 
-\begin_inset Formula $K\left(p,n\right)_{m}\left(X\right)=0$
+ We conclude that 
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
 \end_inset
 
 .
@@ -1567,7 +1543,15 @@ The proof relies on a major theorem called the Nilpotence Theorem.
 \begin_inset Formula $\mathcal{C}_{\geq n}$
 \end_inset
 
- is a prime ideal.
+ is a prime ideal (note that 
+\begin_inset Formula $\mathcal{C}_{\geq0}$
+\end_inset
+
+ is not a proper subcategory, thus only for 
+\begin_inset Formula $n=1,2,\dotsc,\infty$
+\end_inset
+
+.)
 \end_layout
 
 \begin_layout Proof
@@ -1576,7 +1560,7 @@ For
 \end_inset
 
  by Kunneth we have 
-\begin_inset Formula $K\left(n-1\right)_{*}\left(X\otimes Y\right)=K\left(n-1\right)_{*}\left(X\right)\otimes K\left(n-1\right)_{*}\left(Y\right)$
+\begin_inset Formula $K\left(p,n-1\right)_{*}\left(X\otimes Y\right)=K\left(p,n-1\right)_{*}\left(X\right)\otimes K\left(p,n-1\right)_{*}\left(Y\right)$
 \end_inset
 
 .
@@ -1619,20 +1603,149 @@ For
 \begin_inset Formula $\left\{ \mathcal{C}_{\geq k},\mathcal{C}_{\geq k+1},\dotsc,\mathcal{C}_{\geq\infty}\right\} $
 \end_inset
 
- (note that 
-\begin_inset Formula $\mathcal{C}_{\geq0}$
+.
+\end_layout
+
+\begin_layout Remark*
+The chromatic picture can be described for all 
+\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
 \end_inset
 
- is not a proper prime ideal.)
+ at once, which has all the primes above for each 
+\begin_inset Formula $p$
+\end_inset
+
+ with the above closed sets, except that all 
+\begin_inset Formula $\mathcal{C}_{\geq1}$
+\end_inset
+
+ for different 
+\begin_inset Formula $p$
+\end_inset
+
+ are the same (
+\begin_inset Formula $H\mathbb{Q}$
+\end_inset
+
+-acyclics.)
+\end_layout
+
+\begin_layout Subsection
+Morava E-Theory
 \end_layout
 
 \begin_layout Standard
-???????????????????? Should I say something about the global picture, and
- mention 
-\begin_inset Formula $\mathrm{Sp}_{\mathrm{tor}}^{\mathrm{fin}}$
+??????????????????????????
+\end_layout
+
+\begin_layout Subsection
+Further Results
+\end_layout
+
+\begin_layout Standard
+The ideas above lead to the idea of studying spectra height-by-height, and
+ investigate further the connection between Morava E-Theory and Morava K-Theory.
+\end_layout
+
+\begin_layout Standard
+???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+\end_layout
+
+\begin_layout Definition
+For each 
+\begin_inset Formula $n$
 \end_inset
 
- ???????????????????
+ we have a map 
+\begin_inset Formula $L_{E\left(p,n+1\right)}X\to L_{E\left(p,n\right)}X$
+\end_inset
+
+, thus we can form 
+\emph on
+the chromatic tower
+\emph default
+ 
+\begin_inset Formula $\dotsc\to L_{E\left(p,2\right)}X\to L_{E\left(p,1\right)}X\to L_{E\left(p,0\right)}X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Chromatic Convergence Theorem 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 32"
+key "Lur"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The limit of the chromatic tower is 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Chromatic Square 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 23"
+key "Lur"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+There is a pullback diagram:
+\begin_inset Formula 
+\[
+\xymatrix{L_{E\left(p,n\right)}X\ar[r]\ar[d] & L_{K\left(p,n\right)}X\ar[d]\\
+L_{E\left(p,n-1\right)}X\ar[r] & L_{E\left(p,n-1\right)}L_{K\left(p,n\right)}X
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+The chromatic square resembles the 
+\emph on
+arithmetic square
+\emph default
+, which allows gluing data from different primes to get the original spectrum.
+ However, the pieces are not exactly the 
+\begin_inset Formula $p$
+\end_inset
+
+-localizations, so we don't present it here.
+ These theorems go under the name fracture theorems.
 \end_layout
 
 \begin_layout Standard
