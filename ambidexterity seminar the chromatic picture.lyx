@@ -237,16 +237,15 @@ Take
 \begin_inset Formula $R=\mathbb{Z}$
 \end_inset
 
-, thus 
+, then 
 \begin_inset Formula $\mathrm{Ch}\left(X\right)$
 \end_inset
 
- are chain complexes of abelian groups, and 
+ is chain complexes of abelian groups, and 
 \begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
- are chain complexes with finitely-many non-zero entries, each of which
- is 
+ are those with finitely-many non-zero entries, each of which is 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
@@ -256,7 +255,7 @@ Take
 \end_inset
 
 , and define 
-\begin_inset Formula $\mathcal{T}_{K_{\bullet}}=\left\{ A_{\bullet}\mid A_{\bullet}\otimes K_{\bullet}=0\right\} $
+\begin_inset Formula $\mathcal{T}_{K_{\bullet}}=\left\{ A_{\bullet}\in\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\mid A_{\bullet}\otimes K_{\bullet}=0\right\} $
 \end_inset
 
 .
@@ -264,20 +263,18 @@ Take
 \begin_inset Formula $0\in\mathcal{T}_{K_{\bullet}}$
 \end_inset
 
-, in a pushout where 
-\begin_inset Formula $3$
-\end_inset
-
- are 
+.
+ Since tensor is left, it sends pushout to pushout ????????? not sure ???????,
+ and three are 
 \begin_inset Formula $0$
 \end_inset
 
- the fourth is 
+ so the fourth is 
 \begin_inset Formula $0$
 \end_inset
 
- ?????????????????????? not sure, localization is left so sends pushout
- to pushout ???????????, and if 
+.
+ Lastly, if 
 \begin_inset Formula $A_{\bullet}\to B_{\bullet}\to A_{\bullet}$
 \end_inset
 
@@ -286,11 +283,15 @@ Take
 \end_inset
 
  then 
-\begin_inset Formula $A_{\bullet}\otimes K_{\bullet}\to0\to A_{\bullet}\otimes K_{\bullet}$
+\begin_inset Formula $\mathrm{id}_{A_{\bullet}\otimes K_{\bullet}}$
 \end_inset
 
- is the identity thus 
+ factors through 
 \begin_inset Formula $0$
+\end_inset
+
+, thus 
+\begin_inset Formula $A_{\bullet}\otimes K_{\bullet}=0$
 \end_inset
 
 .
@@ -1289,8 +1290,13 @@ Let
 \end_layout
 
 \begin_layout Proof
-Let be a cofiber sequence 
-\begin_inset Formula $X'\to X\to X''$
+Clearly 
+\begin_inset Formula $0\in\mathcal{T}_{E}$
+\end_inset
+
+.
+ Let be a cofiber sequence 
+\begin_inset Formula $X\to Y\to Z$
 \end_inset
 
 , then we get a LES in 
@@ -1306,13 +1312,13 @@ Let be a cofiber sequence
  from complexes ????????????????:
 \begin_inset Formula 
 \[
-\cdots\to E_{m-1}\left(X''\right)\to E_{m}\left(X'\right)\to E_{m}\left(X\right)\to E_{m}\left(X''\right)\to E_{m+1}\left(X'\right)\to\cdots
+\cdots\to E_{m-1}\left(Z\right)\to E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(Z\right)\to E_{m+1}\left(X\right)\to\cdots
 \]
 
 \end_inset
 
 For a retract 
-\begin_inset Formula $i:X\to Y,r:Y\to X,ri=\mathrm{id}_{X}$
+\begin_inset Formula $X\to Y\to Y$
 \end_inset
 
 , we get 
@@ -1344,7 +1350,7 @@ We define
 \end_inset
 
 -acyclics (equivalently 
-\begin_inset Formula $A\otimes K\left(p,n-1\right)\simeq0$
+\begin_inset Formula $X\otimes K\left(p,n-1\right)\simeq0$
 \end_inset
 
 .) By the above it is thick.
