@@ -155,7 +155,14 @@ key "Hop,Nee"
 
 \end_inset
 
-, which we state now.
+, later on in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bal04,Bal10"
+
+\end_inset
+
+ the result is further improved, and we will state that version.
 \end_layout
 
 \begin_layout Definition
@@ -303,90 +310,6 @@ Take
 \end_layout
 
 \begin_layout Definition
-A subset 
-\begin_inset Formula $V\subseteq X$
-\end_inset
-
- is called 
-\emph on
-specialization closed
-\emph default
- if it is a union of closed sets.
- Equivalently, if 
-\begin_inset Formula $\mathfrak{p}\subseteq\mathfrak{q}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathfrak{p}\in V$
-\end_inset
-
-, then 
-\begin_inset Formula $\mathfrak{q}\in V$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Hopkins–Neeman
-\end_layout
-
-\end_inset
-
- There is an inclusion-preserving bijection of sets
-\begin_inset Formula 
-\[
-\left\{ \textrm{Thick subcategories of \ensuremath{\mathrm{Ch}_{\mathrm{perf}}\left(X\right)}}\right\} \rightleftarrows\left\{ \textrm{Specialization closed subsets of \ensuremath{X}}\right\} 
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark*
-They actually give an explicit way to define the functions, but we omit
- it for the sake of brevity.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark*
-The theorem was improved in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Tho"
-
-\end_inset
-
- to any quasi-compact quasi-separated scheme 
-\begin_inset Formula $X$
-\end_inset
-
-, and compact objects in its derived category.
-\end_layout
-
-\begin_layout Standard
-Later on, in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bal04,Bal10"
-
-\end_inset
-
- the result is improved further.
-\end_layout
-
-\begin_layout Definition
 A thick subcategory 
 \begin_inset Formula $\mathcal{T}$
 \end_inset
@@ -487,15 +410,20 @@ Continuing the case
 \begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
 \end_inset
 
- iff it is only 
-\begin_inset Formula $q$
+ iff it is torsion (without 
+\begin_inset Formula $p$
 \end_inset
 
--torsion for 
-\begin_inset Formula $q\neq p$
+-torsion,) and 
+\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}$
 \end_inset
 
-, and we can prove that it is indeed a prime ideal, and similarly for 
+ is such iff at least of them is, i.e.
+ 
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\end_inset
+
+ is indeed a prime ideal, and similarly for 
 \begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
@@ -524,16 +452,16 @@ Continuing the case
 \begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
- includes all the others.
- Indeed by theorem we have 
+ contains all the others.
+ This is in accordance with the theorem, indeed 
 \begin_inset Formula $p\mathbb{Z}\mapsto\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{p\mathbb{Z}}=0\right\} =\left\{ A_{\bullet}\mid A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}=0\right\} =\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
 \end_inset
 
-, and similarly 
+ and 
 \begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
-.
+ are prime ideals.
  Therefore 
 \begin_inset Formula $\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(2\right)}},\mathcal{T}_{\mathbb{Z}_{\left(3\right)}},\dotsc,\mathcal{T}_{\mathbb{Q}}\right\} $
 \end_inset
@@ -557,7 +485,11 @@ does not
 \begin_inset Formula $q=p$
 \end_inset
 
-.
+, so 
+\begin_inset Formula $\mathrm{supp}\left(\mathbb{F}_{p}\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\right\} $
+\end_inset
+
+ as we'd expect.
 \end_layout
 
 \begin_layout Section
@@ -582,7 +514,7 @@ reconstruct the space
 \end_layout
 
 \begin_layout Standard
-We wull concentrate at the 
+We will concentrate at the 
 \begin_inset Formula $p$
 \end_inset
 
@@ -590,14 +522,15 @@ We wull concentrate at the
 \begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
 \end_inset
 
-, for some prime, which is a mild operation.
- All the statements can actually be states at the level of all spectra,
- but it is easier to state them at 
+, for some fixed prime.
+ Such localization is a mild operation, and actually all the statements
+ that follow can be stated at the level of all spectra, but it is easier
+ to state them at 
 \begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
 \end_inset
 
 .
- We remind ourselves that the compact objects are finite spectra.
+ We also remind ourselves that the compact objects are finite spectra.
 \end_layout
 
 \begin_layout Subsection
@@ -724,11 +657,11 @@ Morava K-Theory of height
 \end_layout
 
 \begin_layout Itemize
-It is a field (and in particular, (
+It is a field (and in particular, an 
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--)ring spectrum.)
+-ring spectrum.)
 \end_layout
 
 \begin_layout Itemize
@@ -791,13 +724,11 @@ Remember that
 \begin_inset Formula $\mathbb{F}_{p}\left[\beta^{\pm1}\right]$
 \end_inset
 
-.
- thus by the above it is a module over 
+, and it can be shown that it is a module over 
 \begin_inset Formula $K\left(p,1\right)$
 \end_inset
 
-.
- Note that 
+, and since 
 \begin_inset Formula $\deg v_{1}=2\left(p-1\right)$
 \end_inset
 
@@ -805,7 +736,7 @@ Remember that
 \begin_inset Formula $\deg\beta=2$
 \end_inset
 
-, thus 
+, 
 \begin_inset Formula $K/p$
 \end_inset
 
@@ -862,12 +793,12 @@ A spectrum
 \begin_inset Formula $E_{*}\left(Z\right)=\pi_{*}\left(E\otimes Z\right)=0$
 \end_inset
 
-, equivalently 
+ (i.e.
+ 
 \begin_inset Formula $E\otimes Z\simeq0$
 \end_inset
 
-.
- A spectrum 
+ .) A spectrum 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -883,12 +814,13 @@ A spectrum
 \begin_inset Formula $\left[Z,Y\right]_{*}=0$
 \end_inset
 
-, equivalently 
+ (i.e.
+ equivalently 
 \begin_inset Formula $\mathrm{Map}\left(Z,Y\right)\simeq0$
 \end_inset
 
- for all 
-\begin_inset Formula $p$
+) for all 
+\begin_inset Formula $E$
 \end_inset
 
 -acyclic 
@@ -927,7 +859,7 @@ Let
 
 -localization
 \emph default
- is an 
+ is the universal 
 \begin_inset Formula $E$
 \end_inset
 
@@ -935,10 +867,10 @@ Let
 \begin_inset Formula $\varphi:X\to L_{E}X$
 \end_inset
 
- that is universal.
+.
  I.e.
  s.t.
- for each map to a 
+ for each map to an 
 \begin_inset Formula $E$
 \end_inset
 
@@ -964,7 +896,7 @@ Let
 \begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
 \end_inset
 
- (and the map is 
+ (and the map corresponds to 
 \begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
 \end_inset
 
@@ -978,7 +910,7 @@ The name localization might be confusing.
 \end_inset
 
  which should be though of as a field.
- In analogy, the 
+ Analogously, the 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -992,8 +924,11 @@ The name localization might be confusing.
 
 , i.e.
  the completion, not the localization (note that we actually want to work
- in complexes, but this is the result we would get after interpreting abelian
- groups 
+ in complexes, but this is the result we would get after interpreting 
+\begin_inset Formula $\left\langle S\mid R\right\rangle $
+\end_inset
+
+ as 
 \begin_inset Formula $\mathbb{Z}\left\langle R\right\rangle \to\mathbb{Z}\left\langle S\right\rangle $
 \end_inset
 
@@ -1252,7 +1187,7 @@ The inclusion is proper
 
  has finite type.
  We conclude that 
-\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{\geq n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
 \end_inset
 
 .
@@ -1402,12 +1337,9 @@ Further Results
 \end_layout
 
 \begin_layout Standard
-The ideas above lead to the idea of studying spectra height-by-height, and
- investigate further the connection between Morava E-Theory and Morava K-Theory.
-\end_layout
-
-\begin_layout Standard
-???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+The ideas above lead to the idea of studying spectra one prime at a time,
+ height-by-height.
+ We would like to know how to work out the original spectrum.
 \end_layout
 
 \begin_layout Definition
@@ -1493,18 +1425,56 @@ L_{E\left(p,n-1\right)}X\ar[r] & L_{E\left(p,n-1\right)}L_{K\left(p,n\right)}X
 
 \end_layout
 
-\begin_layout Remark
-The chromatic square resembles the 
-\emph on
-arithmetic square
-\emph default
-, which allows gluing data from different primes to get the original spectrum.
- However, the pieces are not exactly the 
+\begin_layout Standard
+The chromatic square gets its name from another relevant theorem (these
+ theorems go under the name fracture theorems):
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Arithmetic Square
+\end_layout
+
+\end_inset
+
+There is a pullback diagram:
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]\ar[d] & \left(\prod L_{S\mathbb{F}_{p}}X\right)\ar[d]\\
+L_{S\mathbb{Q}}X\ar[r] & L_{S\mathbb{Q}}\left(\prod L_{S\mathbb{F}_{p}}X\right)
+}
+\]
+
+\end_inset
+
+(where actually 
+\begin_inset Formula $L_{S\mathbb{F}_{p}}X=L_{S\mathbb{F}_{p}}X_{\left(p\right)}$
+\end_inset
+
+, so it contains less information then 
+\begin_inset Formula $X_{\left(p\right)}$
+\end_inset
+
+ [
+\begin_inset Formula $X_{\left(p\right)}=L_{S\mathbb{Z}_{\left(p\right)}}X$
+\end_inset
+
+ is the 
 \begin_inset Formula $p$
 \end_inset
 
--localizations, so we don't present it here.
- These theorems go under the name fracture theorems.
+-localization and 
+\begin_inset Formula $L_{S\mathbb{F}_{p}}$
+\end_inset
+
+ is the 
+\begin_inset Formula $p$
+\end_inset
+
+-completion.])
 \end_layout
 
 \begin_layout Standard
