@@ -565,13 +565,7 @@ The Chromatic Picture
 \end_layout
 
 \begin_layout Standard
-Similarly to the analysis in algebra/algebraic geometry, we are going to
- concentrate at a single prime 
-\begin_inset Formula $p$
-\end_inset
-
-.
- Although the category of spectra doesn't arise as the corresponding category
+Although the category of spectra doesn't arise as the corresponding category
  for a scheme or a similar gadget, we can still try to 
 \begin_inset Quotes eld
 \end_inset
@@ -585,6 +579,24 @@ reconstruct the space
 \end_inset
 
  by applying this mechanism, and then try to use this decomposition.
+\end_layout
+
+\begin_layout Standard
+We wull concentrate at the 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra, 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+, for some prime, which is a mild operation.
+ All the statements can actually be states at the level of all spectra,
+ but it is easier to state them at 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+.
  We remind ourselves that the compact objects are finite spectra.
 \end_layout
 
@@ -758,7 +770,7 @@ Remember that
 \begin_inset Formula $K$
 \end_inset
 
- (regular 
+ (regular complex 
 \begin_inset Formula $K$
 \end_inset
 
@@ -775,15 +787,11 @@ Remember that
 \begin_inset Formula $K/p$
 \end_inset
 
- (i.e.
- mod 
-\begin_inset Formula $p$
-\end_inset
-
-,) we get a spectrum with homotopy groups 
+ we get a spectrum with homotopy groups 
 \begin_inset Formula $\mathbb{F}_{p}\left[\beta^{\pm1}\right]$
 \end_inset
 
+.
  thus by the above it is a module over 
 \begin_inset Formula $K\left(p,1\right)$
 \end_inset
@@ -813,304 +821,28 @@ Remember that
 \end_layout
 
 \begin_layout Subsection
-Localization
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset Formula $p$
-\end_inset
-
--localization of an Abelian Group
-\end_layout
-
-\begin_layout Definition
-An abelian group 
-\begin_inset Formula $C$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--acyclic
-\emph default
-, if it has only 
-\begin_inset Formula $q$
-\end_inset
-
--torsion for 
-\begin_inset Formula $q\neq p$
-\end_inset
-
-, equivalently 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes C=0$
-\end_inset
-
-.
- An abelian group 
-\begin_inset Formula $B$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--local
-\emph default
-, if all other primes are invertible (i.e.
- that the map 
-\begin_inset Formula $a\mapsto qa$
-\end_inset
-
- is an isomorphism for 
-\begin_inset Formula $q\neq p$
-\end_inset
-
-,) equivalently 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes B=B$
-\end_inset
-
-, equivalently 
-\begin_inset Formula $\hom\left(C,B\right)=0$
-\end_inset
-
- for all 
-\begin_inset Formula $p$
-\end_inset
-
--acyclic 
-\begin_inset Formula $C$
-\end_inset
-
-.
- The 
-\begin_inset Formula $p$
-\end_inset
-
--local groups form a full subcategory 
-\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-Let 
-\begin_inset Formula $A$
-\end_inset
-
- be an abelian group, its 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--localization
-\emph default
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local abelian group together with a map 
-\begin_inset Formula $\varphi:A\to A_{\left(p\right)}$
-\end_inset
-
- that is universal.
- I.e.
- s.t.
- for each map to a 
-\begin_inset Formula $p$
-\end_inset
-
--local group 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
-, there exists a unique 
-\begin_inset Formula $\tilde{f}:A_{\left(p\right)}\to B$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $f=\tilde{f}\varphi$
-\end_inset
-
-.
- In other word, the 
-\begin_inset Formula $p$
-\end_inset
-
--localization is the left adjoint to the inclusion 
-\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
-\end_inset
-
- (and the map is 
-\begin_inset Formula $\mathrm{id}\in\hom\left(A_{\left(p\right)},A_{\left(p\right)}\right)\cong\hom\left(A,A_{\left(p\right)}\right)$
-\end_inset
-
-.)
-\end_layout
-
-\begin_layout Example*
-Given the abelian group 
-\begin_inset Formula $\mathbb{Z}$
-\end_inset
-
- we have 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset Formula $p$
-\end_inset
-
--localization of a Spectrum
-\end_layout
-
-\begin_layout Standard
-Analogously and using the case of abelian groups.
-\end_layout
-
-\begin_layout Definition
-A spectrum 
-\begin_inset Formula $Y$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--local
-\emph default
-, if 
-\begin_inset Formula $\pi_{*}\left(Y\right)$
-\end_inset
-
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local abelian group.
- The 
-\begin_inset Formula $p$
-\end_inset
-
--local spectra form a full subcategory 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a spectrum, its 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--localization
-\emph default
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local spectrum together with a map 
-\begin_inset Formula $\varphi:X\to X_{\left(p\right)}$
-\end_inset
-
- that is universal.
- I.e.
- s.t.
- for each map to a 
-\begin_inset Formula $p$
-\end_inset
-
--local spectrum 
-\begin_inset Formula $f:X\to Y$
-\end_inset
-
-, there exists a map 
-\begin_inset Formula $\tilde{f}:X_{\left(p\right)}\to Y$
-\end_inset
-
-, unique up to homotopy, s.t.
- 
-\begin_inset Formula $f=\tilde{f}\varphi$
-\end_inset
-
-.
- In other word, the 
-\begin_inset Formula $p$
-\end_inset
-
--localization is the left adjoint to the inclusion 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
-\end_inset
-
- (and the map is 
-\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(X_{\left(p\right)},X_{\left(p\right)}\right)\cong\mathrm{Map}\left(X,X_{\left(p\right)}\right)$
-\end_inset
-
-.)
-\end_layout
-
-\begin_layout Example*
-Given the spectrum 
-\begin_inset Formula $\mathbb{S}$
-\end_inset
-
- we have 
-\begin_inset Formula $\mathbb{S}_{\left(p\right)}$
-\end_inset
-
-, the 
-\begin_inset Formula $p$
-\end_inset
-
--local sphere.
-\end_layout
-
-\begin_layout Remark*
-This discussion carries word-for-word for finite spectra to give 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
+Localization at 
 \begin_inset Formula $E$
 \end_inset
 
--localization of a Spectrum
+
+\end_layout
+
+\begin_layout Standard
+A reference for what follows is at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 20"
+key "Lur"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $E$
+\end_inset
+
+ be a spectrum.
 \end_layout
 
 \begin_layout Definition
@@ -1195,7 +927,7 @@ Let
 
 -localization
 \emph default
- is a 
+ is an 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1234,6 +966,35 @@ Let
 
  (and the map is 
 \begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Remark
+The name localization might be confusing.
+ We will use this mechanism for 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ which should be though of as a field.
+ In analogy, the 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+-localization of 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+, i.e.
+ the completion, not the localization (note that we actually want to work
+ in complexes, but this is the result we would get after interpreting abelian
+ groups 
+\begin_inset Formula $\mathbb{Z}\left\langle R\right\rangle \to\mathbb{Z}\left\langle S\right\rangle $
 \end_inset
 
 .)
