@@ -1058,8 +1058,7 @@ Clearly
 \begin_inset Formula $0$
 \end_inset
 
-, then so is the third ??????????????????? can we use the same argument
- from complexes ????????????????:
+, then so is the third:
 \begin_inset Formula 
 \[
 \cdots\to E_{m-1}\left(Z\right)\to E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(Z\right)\to E_{m+1}\left(X\right)\to\cdots
@@ -1667,7 +1666,7 @@ Arithmetic Square
 There is a pullback diagram:
 \begin_inset Formula 
 \[
-\xymatrix{X\ar[r]\ar[d] & \left(\prod L_{S\mathbb{F}_{p}}X\right)\ar[d]\\
+\xymatrix{X\ar[r]\ar[d] & \prod L_{S\mathbb{F}_{p}}X\ar[d]\\
 L_{S\mathbb{Q}}X\ar[r] & L_{S\mathbb{Q}}\left(\prod L_{S\mathbb{F}_{p}}X\right)
 }
 \]
