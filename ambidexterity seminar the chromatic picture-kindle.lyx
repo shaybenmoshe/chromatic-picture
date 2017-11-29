@@ -1163,8 +1163,7 @@ This result is not true for any spectrum (e.g.
 \begin_inset Formula $n=1$
 \end_inset
 
-), and the fact that it doesn't vanish is important and has to do with Morava
- E-Theory and the way different levels glue.
+).
 \end_layout
 
 \begin_layout Definition
@@ -1199,7 +1198,12 @@ type
 \begin_inset Formula $\geq n$
 \end_inset
 
-.
+ (i.e.
+ 
+\begin_inset Formula $\left\{ X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}\mid\forall m<n:K\left(p,m\right)_{*}\left(X\right)=0\right\} $
+\end_inset
+
+).
  Thus clearly 
 \begin_inset Formula $\mathcal{C}_{\geq n+1}\subseteq\mathcal{C}_{\geq n}$
 \end_inset
@@ -1421,11 +1425,18 @@ Morava E-Theory
 \end_layout
 
 \begin_layout Remark*
-There are many approches to Morava E-Theory.
+There are many approches and flavors to Morava E-Theory.
  The one we use is based on 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DH"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rog"
 
 \end_inset
 
@@ -1438,8 +1449,7 @@ key "Hen"
 \end_inset
 
 .
- A more standard approch is via deformations of the formal group law of
- 
+ Anoter approch is via deformations of the formal group law of 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1528,20 +1538,12 @@ Remember that
 \end_inset
 
  is analogus to 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{Z}_{p}=W\left(\mathbb{F}_{p}\right)$
 \end_inset
 
 , and it makes sense to try an investigate its Galois extensions.
  I will not give a precise definition, and definitely not for a general
- Galois Extension, but just to give an idea (a reference for Galois extensions
- is 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Rog"
-
-\end_inset
-
-):
+ Galois Extension, but just to give an idea:
 \end_layout
 
 \begin_layout Definition
@@ -1593,7 +1595,7 @@ Let
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(x\sigma_{i}\left(y\right)\right)$
+\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(xg.y\right)$
 \end_inset
 
  is an equivalence.
@@ -1665,7 +1667,15 @@ Morava E-Theory
  (and the Galois group, which is not finite, is called the Morava stabilizer
  group).
  It has coefficients 
-\begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\mathbb{F}_{p^{n}}\right)\left\llbracket v_{1},\dotsc,v_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
+\begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\overline{\mathbb{F}}_{p}\right)\left\llbracket u_{1},\dotsc,u_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $\deg u_{i}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\deg\beta=2$
 \end_inset
 
 .
