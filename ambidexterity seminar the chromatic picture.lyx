@@ -272,8 +272,7 @@ Considering the case of
 \end_inset
 
 .
- Since tensor is left, it sends pushout to pushout ????????? not sure ???????,
- and three are 
+ Since tensor is left, it sends pushout to pushout, and three are 
 \begin_inset Formula $0$
 \end_inset
 
@@ -412,31 +411,44 @@ Proof (sketch)
 \end_inset
 
 .
- Finally, since 
-\begin_inset Formula $\left(A_{\bullet}\otimes B_{\bullet}\right)_{\mathfrak{p}}=\left(A_{\bullet}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{\bullet}\right)_{\mathfrak{p}}$
+ Finally, if 
+\begin_inset Formula $0=\left(A_{\bullet}\otimes B_{\bullet}\right)_{\mathfrak{p}}=\left(A_{\bullet}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{\bullet}\right)_{\mathfrak{p}}$
 \end_inset
 
-, it is sufficient to prove that for any two finite projective modules 
-\begin_inset Formula $A,B$
+.
+ Assume by negation that 
+\begin_inset Formula $\left(A_{\bullet}\right)_{\mathfrak{p}}\neq0$
 \end_inset
 
- s.t.
+ and 
+\begin_inset Formula $\left(B_{\bullet}\right)_{\mathfrak{p}}\neq0$
+\end_inset
+
+, i.e.
  
-\begin_inset Formula $A_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}B_{\mathfrak{p}}=0$
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}\neq0$
 \end_inset
 
-, either 
-\begin_inset Formula $A_{\mathfrak{p}}=0$
+ and 
+\begin_inset Formula $\left(B_{m}\right)_{\mathfrak{p}}\neq0$
 \end_inset
 
- or 
-\begin_inset Formula $B_{\mathfrak{p}}=0$
+ but 
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{m}\right)_{\mathfrak{p}}=0$
 \end_inset
 
 .
  Well, localization of projective is projective, and a projective over a
  local ring is free, and clearly if the tensor of two free modules vanish
- then one of them vanishes.
+ then one of them vanishes, so 
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(B_{m}\right)_{\mathfrak{p}}=0$
+\end_inset
+
+ which is a contradiction.
  Therefore 
 \begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
 \end_inset
@@ -448,7 +460,7 @@ Proof (sketch)
 Note that
 \begin_inset Formula 
 \[
-\varphi\left(\mathfrak{p}\right)\in\mathrm{spp}\left(A_{\bullet}\right)\iff A_{\bullet}\notin\varphi\left(\mathfrak{p}\right)\iff\left(A_{\bullet}\right)_{\mathfrak{p}}=0\iff\mathfrak{p}\in\mathrm{supp}\left(A_{\bullet}\right)
+\varphi\left(\mathfrak{p}\right)\in\mathrm{spp}\left(A_{\bullet}\right)\iff A_{\bullet}\notin\varphi\left(\mathfrak{p}\right)\iff\left(A_{\bullet}\right)_{\mathfrak{p}}\neq0\iff\mathfrak{p}\in\mathrm{supp}\left(A_{\bullet}\right)
 \]
 
 \end_inset
@@ -513,6 +525,10 @@ does not
  belong, e.g.
  
 \begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{spp}\left(\mathbb{F}_{p}\right)$
+\end_inset
+
+ iff 
+\begin_inset Formula $\mathbb{F}_{p}\notin\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}$
 \end_inset
 
  iff 
@@ -622,11 +638,11 @@ graded field
 \end_inset
 
  of positive even degree.
- An (
+ An 
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--)ring spectrum 
+-ring spectrum 
 \begin_inset Formula $E$
 \end_inset
 
