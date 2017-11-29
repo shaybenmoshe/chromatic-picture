@@ -1491,7 +1491,88 @@ Remember that
 \end_inset
 
 , and it makes sense to try an investigate its Galois extensions.
- It turns out that there is a spectrum called 
+ I will not give a precise definition, and definitely not for a general
+ Galois Extension, but just to give an idea:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+kind of
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group, and 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ a map between two 
+\begin_inset Formula $E_{\infty}$
+\end_inset
+
+-ring spectra s.t.:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ is equivariant w.r.t to the trivial 
+\begin_inset Formula $G$
+\end_inset
+
+-action on 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\to B^{hG}$
+\end_inset
+
+ is an equivalence,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(x\sigma_{i}\left(y\right)\right)$
+\end_inset
+
+ is an equivalence.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Then 
+\begin_inset Formula $B$
+\end_inset
+
+ is called a 
+\emph on
+Galois extension
+\emph default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ with Galois group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It turns out that there is a spectrum called 
 \emph on
 Morava E-Theory
 \emph default
@@ -1503,8 +1584,8 @@ Morava E-Theory
 \begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
 \end_inset
 
- (and the Galois group is called the Morava stabilizer group.) It has coefficient
-s 
+ (and the Galois group, which is not finite, is called the Morava stabilizer
+ group.) It has coefficients 
 \begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\mathbb{F}_{p^{n}}\right)\left\llbracket v_{1},\dotsc,v_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
 \end_inset
 
