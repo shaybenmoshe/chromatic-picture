@@ -240,24 +240,25 @@ it is closed under retracts
 
 \end_deeper
 \begin_layout Example
-Take 
-\begin_inset Formula $R=\mathbb{Z}$
-\end_inset
-
-, then 
+Considering the case of 
 \begin_inset Formula $\mathrm{Ch}\left(X\right)$
 \end_inset
 
- is chain complexes of abelian groups, and 
+ and 
 \begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
- are those with finitely-many non-zero entries, each of which is 
+ (e.g.
+ over 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
- to some power.
- Let 
+, chain complexes of abelian groups, and those with finitely-many non-zero
+ entries, each of which is 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ to some power, respectively.) Let 
 \begin_inset Formula $K_{\bullet}\in\mathrm{Ch}\left(X\right)$
 \end_inset
 
@@ -359,7 +360,7 @@ Zariski topology
 
 .
  We also denote 
-\begin_inset Formula $\mathrm{supp}\left(a\right)=V\left(\left\{ a\right\} \right)$
+\begin_inset Formula $\mathrm{spp}\left(a\right)=V\left(\left\{ a\right\} \right)$
 \end_inset
 
 .
@@ -376,11 +377,11 @@ Balmer
 \end_inset
 
  There is a homeomorphism 
-\begin_inset Formula $X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
+\begin_inset Formula $\varphi:X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
 \end_inset
 
-, 
-\begin_inset Formula $\mathfrak{p}\mapsto\mathcal{P}=\left\{ M_{\bullet}\mid\left(M_{\bullet}\right)_{\mathfrak{p}}=0\right\} $
+ given by 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)=\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{\mathfrak{p}}=0\right\} =\mathcal{T}_{R_{\mathfrak{p}}}$
 \end_inset
 
 .
@@ -390,41 +391,79 @@ Balmer
 This was actually upgraded to an isomorphism of locally-ringed spaces.
 \end_layout
 
-\begin_layout Example
-Continuing the case 
-\begin_inset Formula $R=\mathbb{Z}$
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof (sketch)
+\end_layout
+
+\end_inset
+
+ First we note that 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
+\end_inset
+
+ is indeed a prime ideal.
+ It was shown to be thick.
+ It is also clearly an ideal, since 
+\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}\otimes R_{\mathfrak{p}}=A_{\bullet}\otimes0=0$
 \end_inset
 
 .
- We've seen that 
-\begin_inset Formula $\mathcal{T}_{K_{\bullet}}$
+ Finally, since 
+\begin_inset Formula $\left(A_{\bullet}\otimes B_{\bullet}\right)_{\mathfrak{p}}=\left(A_{\bullet}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{\bullet}\right)_{\mathfrak{p}}$
 \end_inset
 
- is thick.
- Note that it is also an ideal, since 
-\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}\otimes K_{\bullet}=A_{\bullet}\otimes0=0$
+, it is sufficient to prove that for any two finite projective modules 
+\begin_inset Formula $A,B$
 \end_inset
 
-.
- Note that 
-\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
-\end_inset
-
- iff it is torsion (without 
-\begin_inset Formula $p$
-\end_inset
-
--torsion,) and 
-\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}$
-\end_inset
-
- is such iff at least of them is, i.e.
+ s.t.
  
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
+\begin_inset Formula $A_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}B_{\mathfrak{p}}=0$
 \end_inset
 
- is indeed a prime ideal, and similarly for 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
+, either 
+\begin_inset Formula $A_{\mathfrak{p}}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $B_{\mathfrak{p}}=0$
+\end_inset
+
+.
+ Well, localization of projective is projective, and a projective over a
+ local ring is free, and clearly if the tensor of two free modules vanish
+ then one of them vanishes.
+ Therefore 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
+\end_inset
+
+ is indeed a prime ideal.
+\end_layout
+
+\begin_layout Proof
+Note that
+\begin_inset Formula 
+\[
+\varphi\left(\mathfrak{p}\right)\in\mathrm{spp}\left(A_{\bullet}\right)\iff A_{\bullet}\notin\varphi\left(\mathfrak{p}\right)\iff\left(A_{\bullet}\right)_{\mathfrak{p}}=0\iff\mathfrak{p}\in\mathrm{supp}\left(A_{\bullet}\right)
+\]
+
+\end_inset
+
+and their complements form bases for the topologies.
+ Thus 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is continous, and if it is invertible, the inverse is continous as well.
+\end_layout
+
+\begin_layout Example
+The case 
+\begin_inset Formula $R=\mathbb{Z}$
 \end_inset
 
 .
@@ -461,8 +500,7 @@ Continuing the case
 \begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
- are prime ideals.
- Therefore 
+ are prime ideals, and we recovered the toplogy on 
 \begin_inset Formula $\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(2\right)}},\mathcal{T}_{\mathbb{Z}_{\left(3\right)}},\dotsc,\mathcal{T}_{\mathbb{Q}}\right\} $
 \end_inset
 
@@ -474,7 +512,7 @@ does not
 \emph default
  belong, e.g.
  
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{supp}\left(\mathbb{F}_{p}\right)$
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{spp}\left(\mathbb{F}_{p}\right)$
 \end_inset
 
  iff 
@@ -486,7 +524,7 @@ does not
 \end_inset
 
 , so 
-\begin_inset Formula $\mathrm{supp}\left(\mathbb{F}_{p}\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\right\} $
+\begin_inset Formula $\mathrm{spp}\left(\mathbb{F}_{p}\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\right\} $
 \end_inset
 
  as we'd expect.
@@ -1328,8 +1366,178 @@ The chromatic picture can be described for all
 Morava E-Theory
 \end_layout
 
+\begin_layout Remark*
+There are many approches to Morava E-Theory.
+ The one we use is based on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DH"
+
+\end_inset
+
+.
+ See also 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hen"
+
+\end_inset
+
+.
+ A more standard approch is via deformations of the formal group law of
+ 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+, this approch can found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lur"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
-??????????????????????????
+The results above indicate that 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+sees
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $K\left(p,n-1\right)$
+\end_inset
+
+ (for we had the claim, if 
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0\implies K\left(p,n-1\right)_{*}\left(X\right)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+.
+ And first the is in the latter's closure.) In some sense (which will be
+ more precise later,) 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ determines the 
+\begin_inset Formula $n$
+\end_inset
+
+-th chromatic level.
+ We would like to find a spectrum that sees all 
+\begin_inset Formula $\leq n$
+\end_inset
+
+ chromatic levels at once.
+\end_layout
+
+\begin_layout Standard
+Remember that 
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+ is analogus to 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+, and 
+\begin_inset Formula $L_{K\left(p,n\right)}$
+\end_inset
+
+ is analogus to completion at 
+\begin_inset Formula $p$
+\end_inset
+
+ (localization at 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+,) so the 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+-local sphere 
+\begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
+\end_inset
+
+ is analogus to 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+, and it makes sense to try an investigate its Galois extensions.
+ It turns out that there is a spectrum called 
+\emph on
+Morava E-Theory
+\emph default
+, denoted by 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+, which is the maximal Galois extension of 
+\begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
+\end_inset
+
+ (and the Galois group is called the Morava stabilizer group.) It has coefficient
+s 
+\begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\mathbb{F}_{p^{n}}\right)\left\llbracket v_{1},\dotsc,v_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The following statement is a formalization of the idea that 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+ sees all 
+\begin_inset Formula $\leq n$
+\end_inset
+
+ chromatic levels at once.
+\end_layout
+
+\begin_layout Proposition
+For 
+\begin_inset Formula $E=K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+ and for 
+\begin_inset Formula $E=E\left(p,n\right)$
+\end_inset
+
+, being 
+\begin_inset Formula $E$
+\end_inset
+
+-acyclic, being 
+\begin_inset Formula $E$
+\end_inset
+
+-local and 
+\begin_inset Formula $L_{E}$
+\end_inset
+
+ are the same.
+\end_layout
+
+\begin_layout Remark*
+In other words they are 
+\emph on
+Bousfield equivalent
+\emph default
+, and clearly the first implies the rest.
 \end_layout
 
 \begin_layout Subsection
