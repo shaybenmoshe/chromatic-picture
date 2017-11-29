@@ -773,7 +773,7 @@ Remember that
 \end_inset
 
 -theory) has 
-\begin_inset Formula $\pi_{*}\left(K\right)=\mathbb{Z}\left[\beta^{\pm1}\right]$
+\begin_inset Formula $\pi_{*}K=\mathbb{Z}\left[\beta^{\pm1}\right]$
 \end_inset
 
  where 
@@ -969,7 +969,7 @@ Let
 ).
 \end_layout
 
-\begin_layout Remark
+\begin_layout Remark*
 The name localization might be confusing.
  We will use this mechanism for 
 \begin_inset Formula $K\left(p,n\right)$
@@ -1487,7 +1487,8 @@ sees
 \begin_inset Formula $n$
 \end_inset
 
--th chromatic level.
+-th chromatic level, and an infinitesimal neighbourhood around it, so that
+ we can glue data from lower height.
  We would like to find a spectrum that sees all 
 \begin_inset Formula $\leq n$
 \end_inset
@@ -1530,7 +1531,15 @@ Remember that
 
 , and it makes sense to try an investigate its Galois extensions.
  I will not give a precise definition, and definitely not for a general
- Galois Extension, but just to give an idea:
+ Galois Extension, but just to give an idea (a reference for Galois extensions
+ is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rog"
+
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Definition
@@ -1839,7 +1848,7 @@ L_{S\mathbb{Q}}X\ar[r] & L_{S\mathbb{Q}}\left(\prod L_{S\mathbb{F}_{p}}X\right)
 \end_inset
 
 -localization and 
-\begin_inset Formula $L_{S\mathbb{F}_{p}}$
+\begin_inset Formula $L_{S\mathbb{F}_{p}}X$
 \end_inset
 
  is the 

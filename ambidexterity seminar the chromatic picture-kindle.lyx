@@ -114,7 +114,8 @@ key "Iye,Mur"
 \begin_inset Formula $\infty$
 \end_inset
 
--categories.) In what follows, 
+-categories).
+ In what follows, 
 \begin_inset Formula $R$
 \end_inset
 
@@ -157,7 +158,14 @@ key "Hop,Nee"
 
 \end_inset
 
-, which we state now.
+, later on in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bal04,Bal10"
+
+\end_inset
+
+ the result is further improved, and we will state that version.
 \end_layout
 
 \begin_layout Definition
@@ -235,23 +243,25 @@ it is closed under retracts
 
 \end_deeper
 \begin_layout Example
-Take 
-\begin_inset Formula $R=\mathbb{Z}$
-\end_inset
-
-, then 
+Considering the case of 
 \begin_inset Formula $\mathrm{Ch}\left(X\right)$
 \end_inset
 
- is chain complexes of abelian groups, and 
+ and 
 \begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
- are those with finitely-many non-zero entries, each of which is 
+ (e.g.
+ over 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
- to some power.
+, chain complexes of abelian groups, and those with finitely-many non-zero
+ entries, each of which is 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ to some power, respectively).
  Let 
 \begin_inset Formula $K_{\bullet}\in\mathrm{Ch}\left(X\right)$
 \end_inset
@@ -266,8 +276,7 @@ Take
 \end_inset
 
 .
- Since tensor is left, it sends pushout to pushout ????????? not sure ???????,
- and three are 
+ Since tensor is left, it sends pushout to pushout, and three are 
 \begin_inset Formula $0$
 \end_inset
 
@@ -302,90 +311,6 @@ Take
 \end_inset
 
  is thick.
-\end_layout
-
-\begin_layout Definition
-A subset 
-\begin_inset Formula $V\subseteq X$
-\end_inset
-
- is called 
-\emph on
-specialization closed
-\emph default
- if it is a union of closed sets.
- Equivalently, if 
-\begin_inset Formula $\mathfrak{p}\subseteq\mathfrak{q}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathfrak{p}\in V$
-\end_inset
-
-, then 
-\begin_inset Formula $\mathfrak{q}\in V$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Hopkins–Neeman
-\end_layout
-
-\end_inset
-
- There is an inclusion-preserving bijection of sets
-\begin_inset Formula 
-\[
-\left\{ \textrm{Thick subcategories of \ensuremath{\mathrm{Ch}_{\mathrm{perf}}\left(X\right)}}\right\} \rightleftarrows\left\{ \textrm{Specialization closed subsets of \ensuremath{X}}\right\} 
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark*
-They actually give an explicit way to define the functions, but we omit
- it for the sake of brevity.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark*
-The theorem was improved in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Tho"
-
-\end_inset
-
- to any quasi-compact quasi-separated scheme 
-\begin_inset Formula $X$
-\end_inset
-
-, and compact objects in its derived category.
-\end_layout
-
-\begin_layout Standard
-Later on, in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bal04,Bal10"
-
-\end_inset
-
- the result is improved further.
 \end_layout
 
 \begin_layout Definition
@@ -438,7 +363,7 @@ Zariski topology
 
 .
  We also denote 
-\begin_inset Formula $\mathrm{supp}\left(a\right)=V\left(\left\{ a\right\} \right)$
+\begin_inset Formula $\mathrm{spp}\left(a\right)=V\left(\left\{ a\right\} \right)$
 \end_inset
 
 .
@@ -455,11 +380,11 @@ Balmer
 \end_inset
 
  There is a homeomorphism 
-\begin_inset Formula $X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
+\begin_inset Formula $\varphi:X\to\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)$
 \end_inset
 
-, 
-\begin_inset Formula $\mathfrak{p}\mapsto\mathcal{P}=\left\{ M_{\bullet}\mid\left(M_{\bullet}\right)_{\mathfrak{p}}=0\right\} $
+ given by 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)=\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{\mathfrak{p}}=0\right\} =\mathcal{T}_{R_{\mathfrak{p}}}$
 \end_inset
 
 .
@@ -469,36 +394,92 @@ Balmer
 This was actually upgraded to an isomorphism of locally-ringed spaces.
 \end_layout
 
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Proof (sketch)
+\end_layout
+
+\end_inset
+
+ First we note that 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
+\end_inset
+
+ is indeed a prime ideal.
+ It was shown to be thick.
+ It is also clearly an ideal, since 
+\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}\otimes R_{\mathfrak{p}}=A_{\bullet}\otimes0=0$
+\end_inset
+
+.
+ Finally, if 
+\begin_inset Formula $0=\left(A_{\bullet}\otimes B_{\bullet}\right)_{\mathfrak{p}}=\left(A_{\bullet}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{\bullet}\right)_{\mathfrak{p}}$
+\end_inset
+
+.
+ Assume by negation that 
+\begin_inset Formula $\left(A_{\bullet}\right)_{\mathfrak{p}}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(B_{\bullet}\right)_{\mathfrak{p}}\neq0$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(B_{m}\right)_{\mathfrak{p}}\neq0$
+\end_inset
+
+ but 
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}\otimes_{R_{\mathfrak{p}}}\left(B_{m}\right)_{\mathfrak{p}}=0$
+\end_inset
+
+.
+ Well, localization of projective is projective, and a projective over a
+ local ring is free, and clearly if the tensor of two free modules vanish
+ then one of them vanishes, so 
+\begin_inset Formula $\left(A_{n}\right)_{\mathfrak{p}}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(B_{m}\right)_{\mathfrak{p}}=0$
+\end_inset
+
+ which is a contradiction.
+ Therefore 
+\begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
+\end_inset
+
+ is indeed a prime ideal.
+\end_layout
+
+\begin_layout Proof
+Note that
+\begin_inset Formula 
+\[
+\varphi\left(\mathfrak{p}\right)\in\mathrm{spp}\left(A_{\bullet}\right)\iff A_{\bullet}\notin\varphi\left(\mathfrak{p}\right)\iff\left(A_{\bullet}\right)_{\mathfrak{p}}\neq0\iff\mathfrak{p}\in\mathrm{supp}\left(A_{\bullet}\right)
+\]
+
+\end_inset
+
+and their complements form bases for the topologies.
+ Thus 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is continous, and if it is invertible, the inverse is continous as well.
+\end_layout
+
 \begin_layout Example
-Continuing the case 
+The case 
 \begin_inset Formula $R=\mathbb{Z}$
-\end_inset
-
-.
- We've seen that 
-\begin_inset Formula $\mathcal{T}_{K_{\bullet}}$
-\end_inset
-
- is thick.
- Note that it is also an ideal, since 
-\begin_inset Formula $A_{\bullet}\otimes B_{\bullet}\otimes K_{\bullet}=A_{\bullet}\otimes0=0$
-\end_inset
-
-.
- Note that 
-\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
-\end_inset
-
- iff it is only 
-\begin_inset Formula $q$
-\end_inset
-
--torsion for 
-\begin_inset Formula $q\neq p$
-\end_inset
-
-, and we can prove that it is indeed a prime ideal, and similarly for 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
 .
@@ -526,17 +507,16 @@ Continuing the case
 \begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
- includes all the others.
- Indeed by theorem we have 
+ contains all the others.
+ This is in accordance with the theorem, indeed 
 \begin_inset Formula $p\mathbb{Z}\mapsto\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{p\mathbb{Z}}=0\right\} =\left\{ A_{\bullet}\mid A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}=0\right\} =\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
 \end_inset
 
-, and similarly 
+ and 
 \begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
 \end_inset
 
-.
- Therefore 
+ are prime ideals, and we recovered the toplogy on 
 \begin_inset Formula $\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(2\right)}},\mathcal{T}_{\mathbb{Z}_{\left(3\right)}},\dotsc,\mathcal{T}_{\mathbb{Q}}\right\} $
 \end_inset
 
@@ -548,7 +528,11 @@ does not
 \emph default
  belong, e.g.
  
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{supp}\left(\mathbb{F}_{p}\right)$
+\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{spp}\left(\mathbb{F}_{p}\right)$
+\end_inset
+
+ iff 
+\begin_inset Formula $\mathbb{F}_{p}\notin\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}$
 \end_inset
 
  iff 
@@ -559,7 +543,11 @@ does not
 \begin_inset Formula $q=p$
 \end_inset
 
-.
+, so 
+\begin_inset Formula $\mathrm{spp}\left(\mathbb{F}_{p}\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\right\} $
+\end_inset
+
+ as we'd expect.
 \end_layout
 
 \begin_layout Section
@@ -567,13 +555,7 @@ The Chromatic Picture
 \end_layout
 
 \begin_layout Standard
-Similarly to the analysis in algebra/algebraic geometry, we are going to
- concentrate at a single prime 
-\begin_inset Formula $p$
-\end_inset
-
-.
- Although the category of spectra doesn't arise as the corresponding category
+Although the category of spectra doesn't arise as the corresponding category
  for a scheme or a similar gadget, we can still try to 
 \begin_inset Quotes eld
 \end_inset
@@ -587,7 +569,26 @@ reconstruct the space
 \end_inset
 
  by applying this mechanism, and then try to use this decomposition.
- We remind ourselves that the compact objects are finite spectra.
+\end_layout
+
+\begin_layout Standard
+We will concentrate at the 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra, 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+, for some fixed prime.
+ Such localization is a mild operation, and actually all the statements
+ that follow can be stated at the level of all spectra, but it is easier
+ to state them at 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+.
+ We also remind ourselves that the compact objects are finite spectra.
 \end_layout
 
 \begin_layout Subsection
@@ -641,11 +642,11 @@ graded field
 \end_inset
 
  of positive even degree.
- An (
+ An 
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--)ring spectrum 
+-ring spectrum 
 \begin_inset Formula $E$
 \end_inset
 
@@ -677,7 +678,16 @@ A field
 .
 \end_layout
 
-\begin_layout Fact
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Definition
+\end_layout
+
+\end_inset
+
 For each prime 
 \begin_inset Formula $p$
 \end_inset
@@ -714,11 +724,11 @@ Morava K-Theory of height
 \end_layout
 
 \begin_layout Itemize
-It is a field (and in particular, (
+It is a field (and in particular, an 
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--)ring spectrum.)
+-ring spectrum).
 \end_layout
 
 \begin_layout Itemize
@@ -747,7 +757,7 @@ If
 \end_layout
 
 \end_deeper
-\begin_layout Fact
+\begin_layout Theorem
 We also take 
 \begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
 \end_inset
@@ -760,12 +770,12 @@ Remember that
 \begin_inset Formula $K$
 \end_inset
 
- (regular 
+ (regular complex 
 \begin_inset Formula $K$
 \end_inset
 
 -theory) has 
-\begin_inset Formula $\pi_{*}\left(K\right)=\mathbb{Z}\left[\beta^{\pm1}\right]$
+\begin_inset Formula $\pi_{*}K=\mathbb{Z}\left[\beta^{\pm1}\right]$
 \end_inset
 
  where 
@@ -777,21 +787,15 @@ Remember that
 \begin_inset Formula $K/p$
 \end_inset
 
- (i.e.
- mod 
-\begin_inset Formula $p$
-\end_inset
-
-,) we get a spectrum with homotopy groups 
+ we get a spectrum with homotopy groups 
 \begin_inset Formula $\mathbb{F}_{p}\left[\beta^{\pm1}\right]$
 \end_inset
 
- thus by the above it is a module over 
+, and it can be shown that it is a module over 
 \begin_inset Formula $K\left(p,1\right)$
 \end_inset
 
-.
- Note that 
+, and since 
 \begin_inset Formula $\deg v_{1}=2\left(p-1\right)$
 \end_inset
 
@@ -799,7 +803,7 @@ Remember that
 \begin_inset Formula $\deg\beta=2$
 \end_inset
 
-, thus 
+, 
 \begin_inset Formula $K/p$
 \end_inset
 
@@ -815,304 +819,28 @@ Remember that
 \end_layout
 
 \begin_layout Subsection
-Localization
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset Formula $p$
-\end_inset
-
--localization of an Abelian Group
-\end_layout
-
-\begin_layout Definition
-An abelian group 
-\begin_inset Formula $C$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--acyclic
-\emph default
-, if it has only 
-\begin_inset Formula $q$
-\end_inset
-
--torsion for 
-\begin_inset Formula $q\neq p$
-\end_inset
-
-, equivalently 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes C=0$
-\end_inset
-
-.
- An abelian group 
-\begin_inset Formula $B$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--local
-\emph default
-, if all other primes are invertible (i.e.
- that the map 
-\begin_inset Formula $a\mapsto qa$
-\end_inset
-
- is an isomorphism for 
-\begin_inset Formula $q\neq p$
-\end_inset
-
-,) equivalently 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}\otimes B=B$
-\end_inset
-
-, equivalently 
-\begin_inset Formula $\hom\left(C,B\right)=0$
-\end_inset
-
- for all 
-\begin_inset Formula $p$
-\end_inset
-
--acyclic 
-\begin_inset Formula $C$
-\end_inset
-
-.
- The 
-\begin_inset Formula $p$
-\end_inset
-
--local groups form a full subcategory 
-\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-Let 
-\begin_inset Formula $A$
-\end_inset
-
- be an abelian group, its 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--localization
-\emph default
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local abelian group together with a map 
-\begin_inset Formula $\varphi:A\to A_{\left(p\right)}$
-\end_inset
-
- that is universal.
- I.e.
- s.t.
- for each map to a 
-\begin_inset Formula $p$
-\end_inset
-
--local group 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
-, there exists a unique 
-\begin_inset Formula $\tilde{f}:A_{\left(p\right)}\to B$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $f=\tilde{f}\varphi$
-\end_inset
-
-.
- In other word, the 
-\begin_inset Formula $p$
-\end_inset
-
--localization is the left adjoint to the inclusion 
-\begin_inset Formula $\mathrm{Ab}_{\left(p\right)}\subset\mathrm{Ab}$
-\end_inset
-
- (and the map is 
-\begin_inset Formula $\mathrm{id}\in\hom\left(A_{\left(p\right)},A_{\left(p\right)}\right)\cong\hom\left(A,A_{\left(p\right)}\right)$
-\end_inset
-
-.)
-\end_layout
-
-\begin_layout Example*
-Given the abelian group 
-\begin_inset Formula $\mathbb{Z}$
-\end_inset
-
- we have 
-\begin_inset Formula $\mathbb{Z}_{\left(p\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset Formula $p$
-\end_inset
-
--localization of a Spectrum
-\end_layout
-
-\begin_layout Standard
-Analogously and using the case of abelian groups.
-\end_layout
-
-\begin_layout Definition
-A spectrum 
-\begin_inset Formula $Y$
-\end_inset
-
- is called 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--local
-\emph default
-, if 
-\begin_inset Formula $\pi_{*}\left(Y\right)$
-\end_inset
-
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local abelian group.
- The 
-\begin_inset Formula $p$
-\end_inset
-
--local spectra form a full subcategory 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a spectrum, its 
-\emph on
-
-\begin_inset Formula $p$
-\end_inset
-
--localization
-\emph default
- is a 
-\begin_inset Formula $p$
-\end_inset
-
--local spectrum together with a map 
-\begin_inset Formula $\varphi:X\to X_{\left(p\right)}$
-\end_inset
-
- that is universal.
- I.e.
- s.t.
- for each map to a 
-\begin_inset Formula $p$
-\end_inset
-
--local spectrum 
-\begin_inset Formula $f:X\to Y$
-\end_inset
-
-, there exists a map 
-\begin_inset Formula $\tilde{f}:X_{\left(p\right)}\to Y$
-\end_inset
-
-, unique up to homotopy, s.t.
- 
-\begin_inset Formula $f=\tilde{f}\varphi$
-\end_inset
-
-.
- In other word, the 
-\begin_inset Formula $p$
-\end_inset
-
--localization is the left adjoint to the inclusion 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}\subset\mathrm{Sp}$
-\end_inset
-
- (and the map is 
-\begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(X_{\left(p\right)},X_{\left(p\right)}\right)\cong\mathrm{Map}\left(X,X_{\left(p\right)}\right)$
-\end_inset
-
-.)
-\end_layout
-
-\begin_layout Example*
-Given the spectrum 
-\begin_inset Formula $\mathbb{S}$
-\end_inset
-
- we have 
-\begin_inset Formula $\mathbb{S}_{\left(p\right)}$
-\end_inset
-
-, the 
-\begin_inset Formula $p$
-\end_inset
-
--local sphere.
-\end_layout
-
-\begin_layout Remark*
-This discussion carries word-for-word for finite spectra to give 
-\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
+Localization at 
 \begin_inset Formula $E$
 \end_inset
 
--localization of a Spectrum
+
+\end_layout
+
+\begin_layout Standard
+A reference for what follows is at 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "lecture 20"
+key "Lur"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $E$
+\end_inset
+
+ be a spectrum.
 \end_layout
 
 \begin_layout Definition
@@ -1132,11 +860,12 @@ A spectrum
 \begin_inset Formula $E_{*}\left(Z\right)=\pi_{*}\left(E\otimes Z\right)=0$
 \end_inset
 
-, equivalently 
+ (i.e.
+ 
 \begin_inset Formula $E\otimes Z\simeq0$
 \end_inset
 
-.
+ ).
  A spectrum 
 \begin_inset Formula $Y$
 \end_inset
@@ -1153,12 +882,13 @@ A spectrum
 \begin_inset Formula $\left[Z,Y\right]_{*}=0$
 \end_inset
 
-, equivalently 
+ (i.e.
+ equivalently 
 \begin_inset Formula $\mathrm{Map}\left(Z,Y\right)\simeq0$
 \end_inset
 
- for all 
-\begin_inset Formula $p$
+) for all 
+\begin_inset Formula $E$
 \end_inset
 
 -acyclic 
@@ -1197,7 +927,7 @@ Let
 
 -localization
 \emph default
- is a 
+ is the universal 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1205,10 +935,10 @@ Let
 \begin_inset Formula $\varphi:X\to L_{E}X$
 \end_inset
 
- that is universal.
+.
  I.e.
  s.t.
- for each map to a 
+ for each map to an 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1234,11 +964,43 @@ Let
 \begin_inset Formula $\mathrm{Sp}_{E}\subset\mathrm{Sp}$
 \end_inset
 
- (and the map is 
+ (and the map corresponds to 
 \begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
 \end_inset
 
-.)
+).
+\end_layout
+
+\begin_layout Remark*
+The name localization might be confusing.
+ We will use this mechanism for 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ which should be though of as a field.
+ Analogously, the 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+-localization of 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+, i.e.
+ the completion, not the localization (note that we actually want to work
+ in complexes, but this is the result we would get after interpreting 
+\begin_inset Formula $\left\langle S\mid R\right\rangle $
+\end_inset
+
+ as 
+\begin_inset Formula $\mathbb{Z}\left\langle R\right\rangle \to\mathbb{Z}\left\langle S\right\rangle $
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -1310,8 +1072,7 @@ Clearly
 \begin_inset Formula $0$
 \end_inset
 
-, then so is the third ??????????????????? can we use the same argument
- from complexes ????????????????:
+, then so is the third:
 \begin_inset Formula 
 \[
 \cdots\to E_{m-1}\left(Z\right)\to E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(Z\right)\to E_{m+1}\left(X\right)\to\cdots
@@ -1355,7 +1116,8 @@ We define
 \begin_inset Formula $X\otimes K\left(p,n-1\right)\simeq0$
 \end_inset
 
-.) By the above it is thick.
+).
+ By the above it is thick.
  Also, 
 \begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
 \end_inset
@@ -1401,7 +1163,7 @@ This result is not true for any spectrum (e.g.
 \begin_inset Formula $n=1$
 \end_inset
 
-,) and the fact that it doesn't vanish is important and has to do with Morava
+), and the fact that it doesn't vanish is important and has to do with Morava
  E-Theory and the way different levels glue.
 \end_layout
 
@@ -1418,7 +1180,7 @@ type
 \begin_inset Formula $\infty$
 \end_inset
 
-,) if the first non-zero Morava K-Theory is 
+), if the first non-zero Morava K-Theory is 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1445,7 +1207,7 @@ type
 .
 \end_layout
 
-\begin_layout Fact*
+\begin_layout Proposition
 The inclusion is proper 
 \begin_inset Formula $\mathcal{C}_{\geq n+1}\subsetneq\mathcal{C}_{\geq n}$
 \end_inset
@@ -1453,7 +1215,31 @@ The inclusion is proper
 .
 \end_layout
 
-\begin_layout Remark*
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+If 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+ is not contractible, then 
+\begin_inset Formula $X$
+\end_inset
+
+ has finite height.
+ Therefore 
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{\geq n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
 \begin_inset Formula $X\simeq0$
 \end_inset
 
@@ -1478,11 +1264,11 @@ The inclusion is proper
 \begin_inset Formula $X$
 \end_inset
 
- is a finite spectrum,) thus for large enough 
+ is a finite spectrum), thus for large enough 
 \begin_inset Formula $n$
 \end_inset
 
-, by AHSS we have 
+, by Atiyah-Hirzebruch SS we have 
 \begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
 \end_inset
 
@@ -1493,7 +1279,7 @@ The inclusion is proper
 
  has finite type.
  We conclude that 
-\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{\geq n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
 \end_inset
 
 .
@@ -1588,7 +1374,7 @@ For
 \end_inset
 
  then the homology of the product vanishes, therefore one in the right side
- must vanish (they are graded vector spaces,) so 
+ must vanish (they are graded vector spaces), so 
 \begin_inset Formula $\mathcal{C}_{\geq n}$
 \end_inset
 
@@ -1634,8 +1420,299 @@ The chromatic picture can be described for all
 Morava E-Theory
 \end_layout
 
+\begin_layout Remark*
+There are many approches to Morava E-Theory.
+ The one we use is based on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DH"
+
+\end_inset
+
+.
+ See also 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hen"
+
+\end_inset
+
+.
+ A more standard approch is via deformations of the formal group law of
+ 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+, this approch can found at 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lur"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
-??????????????????????????
+The results above indicate that 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+sees
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $K\left(p,n-1\right)$
+\end_inset
+
+.
+ (For example, we had the claim that 
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0\implies K\left(p,n-1\right)_{*}\left(X\right)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+.
+ And first the is in the latter's closure.) In some sense (which will be
+ more precise later), 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+ determines the 
+\begin_inset Formula $n$
+\end_inset
+
+-th chromatic level, and an infinitesimal neighbourhood around it, so that
+ we can glue data from lower height.
+ We would like to find a spectrum that sees all 
+\begin_inset Formula $\leq n$
+\end_inset
+
+ chromatic levels at once.
+\end_layout
+
+\begin_layout Standard
+Remember that 
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+ is analogus to 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+, and 
+\begin_inset Formula $L_{K\left(p,n\right)}$
+\end_inset
+
+ is analogus to completion at 
+\begin_inset Formula $p$
+\end_inset
+
+ (localization at 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+), so the 
+\begin_inset Formula $K\left(p,n\right)$
+\end_inset
+
+-local sphere 
+\begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
+\end_inset
+
+ is analogus to 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+, and it makes sense to try an investigate its Galois extensions.
+ I will not give a precise definition, and definitely not for a general
+ Galois Extension, but just to give an idea (a reference for Galois extensions
+ is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rog"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+kind of
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group, and 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ a map between two 
+\begin_inset Formula $E_{\infty}$
+\end_inset
+
+-ring spectra s.t.:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ is equivariant w.r.t to the trivial 
+\begin_inset Formula $G$
+\end_inset
+
+-action on 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\to B^{hG}$
+\end_inset
+
+ is an equivalence,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(x\sigma_{i}\left(y\right)\right)$
+\end_inset
+
+ is an equivalence.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Then 
+\begin_inset Formula $B$
+\end_inset
+
+ is called a 
+\emph on
+Galois extension
+\emph default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ with Galois group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+If we think about extension of (clasical) fields, the first condition means
+ that 
+\begin_inset Formula $G$
+\end_inset
+
+ is acts on 
+\begin_inset Formula $B$
+\end_inset
+
+ as automorphisms over 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B^{G}\subseteq B$
+\end_inset
+
+ is always a Galois extension, and the second condition ensures that 
+\begin_inset Formula $A=B^{G}$
+\end_inset
+
+, the third condition says that 
+\begin_inset Formula $G$
+\end_inset
+
+ is actually the Galois groups (it might not act faithfully for example).
+\end_layout
+
+\begin_layout Standard
+It turns out that there is a spectrum called 
+\emph on
+Morava E-Theory
+\emph default
+, denoted by 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+, which is the maximal Galois extension of 
+\begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
+\end_inset
+
+ (and the Galois group, which is not finite, is called the Morava stabilizer
+ group).
+ It has coefficients 
+\begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\mathbb{F}_{p^{n}}\right)\left\llbracket v_{1},\dotsc,v_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The following statement is a formalization of the idea that 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+ sees all 
+\begin_inset Formula $\leq n$
+\end_inset
+
+ chromatic levels at once.
+\end_layout
+
+\begin_layout Proposition
+For 
+\begin_inset Formula $E=K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+ and for 
+\begin_inset Formula $E=E\left(p,n\right)$
+\end_inset
+
+, being 
+\begin_inset Formula $E$
+\end_inset
+
+-acyclic, being 
+\begin_inset Formula $E$
+\end_inset
+
+-local and 
+\begin_inset Formula $L_{E}$
+\end_inset
+
+ are the same.
+\end_layout
+
+\begin_layout Remark*
+In other words they are 
+\emph on
+Bousfield equivalent
+\emph default
+, and clearly the first implies the rest.
 \end_layout
 
 \begin_layout Subsection
@@ -1643,12 +1720,9 @@ Further Results
 \end_layout
 
 \begin_layout Standard
-The ideas above lead to the idea of studying spectra height-by-height, and
- investigate further the connection between Morava E-Theory and Morava K-Theory.
-\end_layout
-
-\begin_layout Standard
-???????????????? Smash product theorem (Lurie 23, and 30, 31) ?????????????
+The ideas above lead to the idea of studying spectra one prime at a time,
+ height-by-height.
+ We would like to know how to work out the original spectrum.
 \end_layout
 
 \begin_layout Definition
@@ -1734,18 +1808,56 @@ L_{E\left(p,n-1\right)}X\ar[r] & L_{E\left(p,n-1\right)}L_{K\left(p,n\right)}X
 
 \end_layout
 
-\begin_layout Remark
-The chromatic square resembles the 
-\emph on
-arithmetic square
-\emph default
-, which allows gluing data from different primes to get the original spectrum.
- However, the pieces are not exactly the 
+\begin_layout Standard
+The chromatic square gets its name from another relevant theorem (these
+ theorems go under the name fracture theorems):
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Arithmetic Square
+\end_layout
+
+\end_inset
+
+There is a pullback diagram:
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]\ar[d] & \prod L_{S\mathbb{F}_{p}}X\ar[d]\\
+L_{S\mathbb{Q}}X\ar[r] & L_{S\mathbb{Q}}\left(\prod L_{S\mathbb{F}_{p}}X\right)
+}
+\]
+
+\end_inset
+
+(where actually 
+\begin_inset Formula $L_{S\mathbb{F}_{p}}X=L_{S\mathbb{F}_{p}}X_{\left(p\right)}$
+\end_inset
+
+, so it contains less information then 
+\begin_inset Formula $X_{\left(p\right)}$
+\end_inset
+
+ [
+\begin_inset Formula $X_{\left(p\right)}=L_{S\mathbb{Z}_{\left(p\right)}}X$
+\end_inset
+
+ is the 
 \begin_inset Formula $p$
 \end_inset
 
--localizations, so we don't present it here.
- These theorems go under the name fracture theorems.
+-localization and 
+\begin_inset Formula $L_{S\mathbb{F}_{p}}X$
+\end_inset
+
+ is the 
+\begin_inset Formula $p$
+\end_inset
+
+-completion]).
 \end_layout
 
 \begin_layout Standard
