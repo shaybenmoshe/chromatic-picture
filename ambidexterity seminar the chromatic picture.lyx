@@ -112,7 +112,8 @@ key "Iye,Mur"
 \begin_inset Formula $\infty$
 \end_inset
 
--categories.) In what follows, 
+-categories).
+ In what follows, 
 \begin_inset Formula $R$
 \end_inset
 
@@ -258,7 +259,8 @@ Considering the case of
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
- to some power, respectively.) Let 
+ to some power, respectively).
+ Let 
 \begin_inset Formula $K_{\bullet}\in\mathrm{Ch}\left(X\right)$
 \end_inset
 
@@ -674,7 +676,16 @@ A field
 .
 \end_layout
 
-\begin_layout Fact
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Definition
+\end_layout
+
+\end_inset
+
 For each prime 
 \begin_inset Formula $p$
 \end_inset
@@ -715,7 +726,7 @@ It is a field (and in particular, an
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--ring spectrum.)
+-ring spectrum).
 \end_layout
 
 \begin_layout Itemize
@@ -744,7 +755,7 @@ If
 \end_layout
 
 \end_deeper
-\begin_layout Fact
+\begin_layout Theorem
 We also take 
 \begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
 \end_inset
@@ -852,7 +863,8 @@ A spectrum
 \begin_inset Formula $E\otimes Z\simeq0$
 \end_inset
 
- .) A spectrum 
+ ).
+ A spectrum 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -954,7 +966,7 @@ Let
 \begin_inset Formula $\mathrm{id}\in\mathrm{Map}\left(L_{E}X,L_{E}X\right)\cong\mathrm{Map}\left(X,L_{E}X\right)$
 \end_inset
 
-.)
+).
 \end_layout
 
 \begin_layout Remark
@@ -986,7 +998,7 @@ The name localization might be confusing.
 \begin_inset Formula $\mathbb{Z}\left\langle R\right\rangle \to\mathbb{Z}\left\langle S\right\rangle $
 \end_inset
 
-.)
+).
 \end_layout
 
 \begin_layout Subsection
@@ -1102,7 +1114,8 @@ We define
 \begin_inset Formula $X\otimes K\left(p,n-1\right)\simeq0$
 \end_inset
 
-.) By the above it is thick.
+).
+ By the above it is thick.
  Also, 
 \begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
 \end_inset
@@ -1148,7 +1161,7 @@ This result is not true for any spectrum (e.g.
 \begin_inset Formula $n=1$
 \end_inset
 
-,) and the fact that it doesn't vanish is important and has to do with Morava
+), and the fact that it doesn't vanish is important and has to do with Morava
  E-Theory and the way different levels glue.
 \end_layout
 
@@ -1165,7 +1178,7 @@ type
 \begin_inset Formula $\infty$
 \end_inset
 
-,) if the first non-zero Morava K-Theory is 
+), if the first non-zero Morava K-Theory is 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1192,7 +1205,7 @@ type
 .
 \end_layout
 
-\begin_layout Fact*
+\begin_layout Proposition
 The inclusion is proper 
 \begin_inset Formula $\mathcal{C}_{\geq n+1}\subsetneq\mathcal{C}_{\geq n}$
 \end_inset
@@ -1200,7 +1213,31 @@ The inclusion is proper
 .
 \end_layout
 
-\begin_layout Remark*
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+If 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+ is not contractible, then 
+\begin_inset Formula $X$
+\end_inset
+
+ has finite height.
+ Therefore 
+\begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{\geq n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
 \begin_inset Formula $X\simeq0$
 \end_inset
 
@@ -1225,11 +1262,11 @@ The inclusion is proper
 \begin_inset Formula $X$
 \end_inset
 
- is a finite spectrum,) thus for large enough 
+ is a finite spectrum), thus for large enough 
 \begin_inset Formula $n$
 \end_inset
 
-, by AHSS we have 
+, by Atiyah-Hirzebruch SS we have 
 \begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)\cong H_{*}\left(X;\mathbb{F}_{p}\right)\left[v_{n}^{\pm1}\right]$
 \end_inset
 
@@ -1335,7 +1372,7 @@ For
 \end_inset
 
  then the homology of the product vanishes, therefore one in the right side
- must vanish (they are graded vector spaces,) so 
+ must vanish (they are graded vector spaces), so 
 \begin_inset Formula $\mathcal{C}_{\geq n}$
 \end_inset
 
@@ -1431,7 +1468,8 @@ sees
 \begin_inset Formula $K\left(p,n-1\right)$
 \end_inset
 
- (for we had the claim, if 
+.
+ (For example, we had the claim that 
 \begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0\implies K\left(p,n-1\right)_{*}\left(X\right)=0$
 \end_inset
 
@@ -1441,7 +1479,7 @@ sees
 
 .
  And first the is in the latter's closure.) In some sense (which will be
- more precise later,) 
+ more precise later), 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1478,7 +1516,7 @@ Remember that
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
-,) so the 
+), so the 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1571,6 +1609,35 @@ Galois extension
 .
 \end_layout
 
+\begin_layout Remark*
+If we think about extension of (clasical) fields, the first condition means
+ that 
+\begin_inset Formula $G$
+\end_inset
+
+ is acts on 
+\begin_inset Formula $B$
+\end_inset
+
+ as automorphisms over 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B^{G}\subseteq B$
+\end_inset
+
+ is always a Galois extension, and the second condition ensures that 
+\begin_inset Formula $A=B^{G}$
+\end_inset
+
+, the third condition says that 
+\begin_inset Formula $G$
+\end_inset
+
+ is actually the Galois groups (it might not act faithfully for example).
+\end_layout
+
 \begin_layout Standard
 It turns out that there is a spectrum called 
 \emph on
@@ -1585,7 +1652,8 @@ Morava E-Theory
 \end_inset
 
  (and the Galois group, which is not finite, is called the Morava stabilizer
- group.) It has coefficients 
+ group).
+ It has coefficients 
 \begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\mathbb{F}_{p^{n}}\right)\left\llbracket v_{1},\dotsc,v_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
 \end_inset
 
@@ -1778,7 +1846,7 @@ L_{S\mathbb{Q}}X\ar[r] & L_{S\mathbb{Q}}\left(\prod L_{S\mathbb{F}_{p}}X\right)
 \begin_inset Formula $p$
 \end_inset
 
--completion.])
+-completion]).
 \end_layout
 
 \begin_layout Standard
