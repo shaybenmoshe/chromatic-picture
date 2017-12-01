@@ -477,79 +477,6 @@ and their complements form bases for the topologies.
  is continous, and if it is invertible, the inverse is continous as well.
 \end_layout
 
-\begin_layout Example
-The case 
-\begin_inset Formula $R=\mathbb{Z}$
-\end_inset
-
-.
- Clearly, if 
-\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
-\end_inset
-
- then 
-\begin_inset Formula $A_{\bullet}\in\mathcal{T}_{\mathbb{Q}}$
-\end_inset
-
-, thus any 
-\begin_inset Formula $S$
-\end_inset
-
- that doesn't intersect 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
-\end_inset
-
- doesn't intersect any 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
-\end_inset
-
-, so a closed set that contains 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Q}}$
-\end_inset
-
- contains all the others.
- This is in accordance with the theorem, indeed 
-\begin_inset Formula $p\mathbb{Z}\mapsto\left\{ A_{\bullet}\mid\left(A_{\bullet}\right)_{p\mathbb{Z}}=0\right\} =\left\{ A_{\bullet}\mid A_{\bullet}\otimes\mathbb{Z}_{\left(p\right)}=0\right\} =\mathcal{T}_{\mathbb{Z}_{\left(p\right)}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbb{Z}\mapsto\mathcal{T}_{\mathbb{Z}_{\left(0\right)}}=\mathcal{T}_{\mathbb{Q}}$
-\end_inset
-
- are prime ideals, and we recovered the toplogy on 
-\begin_inset Formula $\mathrm{Spc}\left(\mathrm{Ch}_{\mathrm{perf}}\left(X\right)\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(2\right)}},\mathcal{T}_{\mathbb{Z}_{\left(3\right)}},\dotsc,\mathcal{T}_{\mathbb{Q}}\right\} $
-\end_inset
-
-.
- Note that the support of an element is all the prime ideals to which it
- 
-\emph on
-does not
-\emph default
- belong, e.g.
- 
-\begin_inset Formula $\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}\in\mathrm{spp}\left(\mathbb{F}_{p}\right)$
-\end_inset
-
- iff 
-\begin_inset Formula $\mathbb{F}_{p}\notin\mathcal{T}_{\mathbb{Z}_{\left(q\right)}}$
-\end_inset
-
- iff 
-\begin_inset Formula $\mathbb{F}_{p}\otimes\mathbb{Z}_{\left(q\right)}\neq0$
-\end_inset
-
- which is only when 
-\begin_inset Formula $q=p$
-\end_inset
-
-, so 
-\begin_inset Formula $\mathrm{spp}\left(\mathbb{F}_{p}\right)=\left\{ \mathcal{T}_{\mathbb{Z}_{\left(p\right)}}\right\} $
-\end_inset
-
- as we'd expect.
-\end_layout
-
 \begin_layout Section
 The Chromatic Picture
 \end_layout
@@ -1716,29 +1643,46 @@ The following statement is a formalization of the idea that
 \end_layout
 
 \begin_layout Proposition
-For 
-\begin_inset Formula $E=K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
-\end_inset
-
- and for 
-\begin_inset Formula $E=E\left(p,n\right)$
-\end_inset
-
-, being 
-\begin_inset Formula $E$
-\end_inset
-
--acyclic, being 
-\begin_inset Formula $E$
-\end_inset
-
--local and 
-\begin_inset Formula $L_{E}$
-\end_inset
-
- are the same.
+The following are the same:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Being 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-acyclic and being 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-acyclic
+\end_layout
+
+\begin_layout Itemize
+Being 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-local and being 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-local
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-localization and 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-localization
+\end_layout
+
+\end_deeper
 \begin_layout Remark*
 In other words they are 
 \emph on
@@ -1758,7 +1702,12 @@ The ideas above lead to the idea of studying spectra one prime at a time,
 \end_layout
 
 \begin_layout Definition
-For each 
+Let 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+.
+ For each 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1855,7 +1804,12 @@ Arithmetic Square
 
 \end_inset
 
-There is a pullback diagram:
+Let 
+\begin_inset Formula $X\in\mathrm{Sp}$
+\end_inset
+
+.
+ There is a pullback diagram:
 \begin_inset Formula 
 \[
 \xymatrix{X\ar[r]\ar[d] & \prod L_{S\mathbb{F}_{p}}X\ar[d]\\

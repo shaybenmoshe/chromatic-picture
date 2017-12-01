@@ -1641,29 +1641,46 @@ The following statement is a formalization of the idea that
 \end_layout
 
 \begin_layout Proposition
-For 
-\begin_inset Formula $E=K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
-\end_inset
-
- and for 
-\begin_inset Formula $E=E\left(p,n\right)$
-\end_inset
-
-, being 
-\begin_inset Formula $E$
-\end_inset
-
--acyclic, being 
-\begin_inset Formula $E$
-\end_inset
-
--local and 
-\begin_inset Formula $L_{E}$
-\end_inset
-
- are the same.
+The following are the same:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Being 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-acyclic and being 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-acyclic
+\end_layout
+
+\begin_layout Itemize
+Being 
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-local and being 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-local
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(p,n\right)$
+\end_inset
+
+-localization and 
+\begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
+\end_inset
+
+-localization
+\end_layout
+
+\end_deeper
 \begin_layout Remark*
 In other words they are 
 \emph on
@@ -1683,7 +1700,12 @@ The ideas above lead to the idea of studying spectra one prime at a time,
 \end_layout
 
 \begin_layout Definition
-For each 
+Let 
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}$
+\end_inset
+
+.
+ For each 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1780,7 +1802,12 @@ Arithmetic Square
 
 \end_inset
 
-There is a pullback diagram:
+Let 
+\begin_inset Formula $X\in\mathrm{Sp}$
+\end_inset
+
+.
+ There is a pullback diagram:
 \begin_inset Formula 
 \[
 \xymatrix{X\ar[r]\ar[d] & \prod L_{S\mathbb{F}_{p}}X\ar[d]\\
