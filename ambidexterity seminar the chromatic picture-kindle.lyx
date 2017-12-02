@@ -94,7 +94,7 @@ Shay Ben Moshe
 \end_layout
 
 \begin_layout Date
-December 03, 2017
+03/12/2017
 \end_layout
 
 \begin_layout Section
@@ -173,10 +173,10 @@ A
 \emph on
 perfect complex
 \emph default
- is a complex that is quasi-isomorphic to a bounded complex of finite projective
- modules.
- These are the compact objects in the category, so that they can actually
- be defined categorically.
+ is a complex that is quasi-isomorphic to a bounded complex of finitely-generate
+d projective modules.
+ These are the compact objects in the category, so they can actually be
+ defined categorically.
  Denote by 
 \begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
@@ -217,7 +217,7 @@ thick
 \begin_inset Formula $0\in\mathcal{T}$
 \end_inset
 
-
+,
 \end_layout
 
 \begin_layout Enumerate
@@ -234,21 +234,17 @@ let
 \end_inset
 
 , then so is the third (remember that cofiber and fiber sequences are the
- same)
+ same),
 \end_layout
 
 \begin_layout Enumerate
-it is closed under retracts
+it is closed under retracts.
 \end_layout
 
 \end_deeper
 \begin_layout Example
-Considering the case of 
-\begin_inset Formula $\mathrm{Ch}\left(X\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
+Consider the case 
+\begin_inset Formula $\mathcal{C}=\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
  (e.g.
@@ -256,12 +252,7 @@ Considering the case of
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
-, chain complexes of abelian groups, and those with finitely-many non-zero
- entries, each of which is 
-\begin_inset Formula $\mathbb{Z}$
-\end_inset
-
- to some power, respectively).
+, bounded chain complexes of finitely-generated free abelian groups).
  Let 
 \begin_inset Formula $K_{\bullet}\in\mathrm{Ch}\left(X\right)$
 \end_inset
@@ -453,6 +444,15 @@ Proof (sketch)
 \end_inset
 
  which is a contradiction.
+ (Note that I lied, we only know that 
+\begin_inset Formula $\left(A_{\bullet}\otimes B_{\bullet}\right)_{\mathfrak{p}}$
+\end_inset
+
+ is quasi-isomorphic to 
+\begin_inset Formula $0$
+\end_inset
+
+, thus we need to work with maps, the correct proof is similar but messier).
  Therefore 
 \begin_inset Formula $\varphi\left(\mathfrak{p}\right)$
 \end_inset
@@ -474,7 +474,7 @@ and their complements form bases for the topologies.
 \begin_inset Formula $\varphi$
 \end_inset
 
- is continous, and if it is invertible, the inverse is continous as well.
+ is continuous, and if it is invertible, the inverse is continuous as well.
 \end_layout
 
 \begin_layout Section
@@ -586,7 +586,7 @@ field
 \begin_inset Formula $\pi_{*}E$
 \end_inset
 
- is a field.
+ is a graded field.
 \end_layout
 
 \begin_layout Proposition
@@ -648,7 +648,7 @@ Morava K-Theory of height
 \begin_inset Formula $\deg v_{n}=2\left(p^{n}-1\right)$
 \end_inset
 
-.
+,
 \end_layout
 
 \begin_layout Itemize
@@ -656,7 +656,7 @@ It is a field (and in particular, an
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--ring spectrum).
+-ring spectrum),
 \end_layout
 
 \begin_layout Itemize
@@ -793,7 +793,7 @@ A spectrum
 \begin_inset Formula $E\otimes Z\simeq0$
 \end_inset
 
- ).
+).
  A spectrum 
 \begin_inset Formula $Y$
 \end_inset
@@ -811,7 +811,7 @@ A spectrum
 \end_inset
 
  (i.e.
- equivalently 
+ 
 \begin_inset Formula $\mathrm{Map}\left(Z,Y\right)\simeq0$
 \end_inset
 
@@ -1040,11 +1040,7 @@ We define
 \begin_inset Formula $K\left(p,n-1\right)$
 \end_inset
 
--acyclics (equivalently 
-\begin_inset Formula $X\otimes K\left(p,n-1\right)\simeq0$
-\end_inset
-
-).
+-acyclics.
  By the above it is thick.
  Also, 
 \begin_inset Formula $\mathcal{C}_{\geq0}=\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
@@ -1083,7 +1079,7 @@ This result is not true for any spectrum (e.g.
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
- doesn't vanish at 
+-homology doesn't vanish at 
 \begin_inset Formula $n=0$
 \end_inset
 
@@ -1107,7 +1103,7 @@ type
 \begin_inset Formula $\infty$
 \end_inset
 
-), if the first non-zero Morava K-Theory is 
+), if its first non-zero Morava K-Theory-homology is 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
@@ -1163,7 +1159,7 @@ If
 \begin_inset Formula $X$
 \end_inset
 
- has finite height.
+ has finite type.
  Therefore 
 \begin_inset Formula $\cap_{n<\infty}\mathcal{C}_{\geq n}=\left\{ 0\right\} =\mathcal{C}_{\geq\infty}$
 \end_inset
@@ -1269,7 +1265,7 @@ The proof relies on a major theorem called the Nilpotence Theorem.
 \begin_inset Formula $n=1,2,\dotsc,\infty$
 \end_inset
 
-.)
+).
 \end_layout
 
 \begin_layout Proof
@@ -1353,7 +1349,7 @@ Morava E-Theory
 \end_layout
 
 \begin_layout Remark*
-There are many approches and flavors to Morava E-Theory.
+There are many approaches and flavors to Morava E-Theory.
  The one we use is based on 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1377,11 +1373,11 @@ key "Hen"
 \end_inset
 
 .
- Anoter approch is via deformations of the formal group law of 
+ Another approach is via deformations of the formal group law of 
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
-, this approch can found at 
+, which can found at 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Lur"
@@ -1405,27 +1401,32 @@ sees
 \end_inset
 
  
-\begin_inset Formula $K\left(p,n-1\right)$
+\begin_inset Formula $K\left(p,m\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $m<n$
 \end_inset
 
 .
  (For example, we had the claim that 
-\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0\implies K\left(p,n-1\right)_{*}\left(X\right)=0$
+\begin_inset Formula $K\left(p,n\right)_{*}\left(X\right)=0\implies K\left(p,m\right)_{*}\left(X\right)=0$
 \end_inset
 
  for 
 \begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
 \end_inset
 
-, which implied that any open set containing 
+, which implied that any open set that contains 
 \begin_inset Formula $\mathcal{C}_{\geq n+1}$
 \end_inset
 
- contained 
-\begin_inset Formula $\mathcal{C}_{\geq n}$
+ contains 
+\begin_inset Formula $\mathcal{C}_{\geq m}$
 \end_inset
 
-.) The localization 
+ as well).
+ The localization 
 \begin_inset Formula $L_{K\left(p,n\right)}$
 \end_inset
 
@@ -1447,7 +1448,7 @@ Remember that
 \begin_inset Formula $\mathbb{S}$
 \end_inset
 
- is analogus to 
+ is analogous to 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
@@ -1455,7 +1456,7 @@ Remember that
 \begin_inset Formula $K\left(p,n\right)$
 \end_inset
 
- is analogus to 
+ is analogous to 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -1463,7 +1464,7 @@ Remember that
 \begin_inset Formula $L_{K\left(p,n\right)}$
 \end_inset
 
- is analogus to completion at 
+ is analogous to completion at 
 \begin_inset Formula $p$
 \end_inset
 
@@ -1479,7 +1480,7 @@ Remember that
 \begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
 \end_inset
 
- is analogus to 
+ is analogous to 
 \begin_inset Formula $\mathbb{Z}_{p}=W\left(\mathbb{F}_{p}\right)$
 \end_inset
 
@@ -1545,7 +1546,7 @@ Let
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(xg.y\right)$
+\begin_inset Formula $B\otimes_{A}B\to\bigoplus_{G}B,x\otimes y\mapsto\left(x\cdot g.y\right)$
 \end_inset
 
  is an equivalence.
@@ -1573,7 +1574,7 @@ Galois extension
 \end_layout
 
 \begin_layout Remark*
-If we think about extension of (clasical) fields, the first condition means
+If we think about extension of (classical) fields, the first condition means
  that 
 \begin_inset Formula $G$
 \end_inset
@@ -1604,7 +1605,11 @@ If we think about extension of (clasical) fields, the first condition means
 \begin_layout Standard
 It turns out that there is a spectrum called 
 \emph on
-Morava E-Theory
+Morava E-Theory of height 
+\begin_inset Formula $n$
+\end_inset
+
+
 \emph default
 , denoted by 
 \begin_inset Formula $E\left(p,n\right)$
@@ -1699,12 +1704,13 @@ Further Results
 \begin_layout Standard
 The ideas above lead to the idea of studying spectra one prime at a time,
  height-by-height.
- We would like to know how to work out the original spectrum.
+ So given a spectrum we would like to know how to work out the original
+ spectrum from its different localizations.
 \end_layout
 
 \begin_layout Definition
 Let 
-\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}$
+\begin_inset Formula $X\in\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
 \end_inset
 
 .
@@ -1720,11 +1726,15 @@ Let
 \emph on
 the chromatic tower
 \emph default
- 
-\begin_inset Formula $\dotsc\to L_{E\left(p,2\right)}X\to L_{E\left(p,1\right)}X\to L_{E\left(p,0\right)}X$
+: 
+\begin_inset Formula 
+\[
+\dotsc\to L_{E\left(p,2\right)}X\to L_{E\left(p,1\right)}X\to L_{E\left(p,0\right)}X
+\]
+
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Theorem
