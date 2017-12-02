@@ -548,7 +548,8 @@ Let
 \emph on
 graded field
 \emph default
- if every non-zero homogenus is invertible, equivalently it is a field 
+ if every non-zero homogenus element is invertible, equivalently it is a
+ field 
 \begin_inset Formula $F$
 \end_inset
 
