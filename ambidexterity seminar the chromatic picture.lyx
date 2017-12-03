@@ -513,7 +513,24 @@ We will concentrate at the
 \end_inset
 
 .
- We also remind ourselves that the compact objects are finite spectra.
+ We also remind ourselves that the compact objects in spectra are finite
+ spectra 
+\begin_inset Formula $\mathrm{Sp}^{\mathrm{fin}}$
+\end_inset
+
+, and in 
+\begin_inset Formula $p$
+\end_inset
+
+-local spectra they are 
+\begin_inset Formula $p$
+\end_inset
+
+-localizations of finite spectra 
+\begin_inset Formula $\mathrm{Sp}_{\left(p\right)}^{\mathrm{fin}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -654,9 +671,23 @@ It is a field (and in particular, an
 \begin_inset Formula $A_{\infty}$
 \end_inset
 
--ring spectrum),
+-ring spectrum).
 \end_layout
 
+\end_deeper
+\begin_layout Theorem
+We also take 
+\begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $K\left(p,\infty\right)=H\mathbb{F}_{p}$
+\end_inset
+
+ and then we also have:
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 If 
 \begin_inset Formula $E$
@@ -671,7 +702,7 @@ If
 \end_inset
 
  and 
-\begin_inset Formula $n$
+\begin_inset Formula $n=0,1,2,\dotsc,\infty$
 \end_inset
 
 .
@@ -683,14 +714,6 @@ If
 \end_layout
 
 \end_deeper
-\begin_layout Theorem
-We also take 
-\begin_inset Formula $K\left(p,0\right)=H\mathbb{Q}$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Example*
 Remember that 
 \begin_inset Formula $K$
@@ -980,49 +1003,11 @@ Let
 \end_layout
 
 \begin_layout Proof
-Clearly 
-\begin_inset Formula $0\in\mathcal{T}_{E}$
+The exact same proof from 
+\begin_inset Formula $\mathrm{Ch}_{\mathrm{perf}}\left(X\right)$
 \end_inset
 
-.
- Let be a cofiber sequence 
-\begin_inset Formula $X\to Y\to Z$
-\end_inset
-
-, then we get a LES in 
-\begin_inset Formula $E_{*}$
-\end_inset
-
- homology, in which every space is wrapped by the two others, therefore
- if two are 
-\begin_inset Formula $0$
-\end_inset
-
-, then so is the third:
-\begin_inset Formula 
-\[
-\cdots\to E_{m-1}\left(Z\right)\to E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(Z\right)\to E_{m+1}\left(X\right)\to\cdots
-\]
-
-\end_inset
-
-For a retract 
-\begin_inset Formula $X\to Y\to Y$
-\end_inset
-
-, we get 
-\begin_inset Formula $E_{m}\left(X\right)\to E_{m}\left(Y\right)\to E_{m}\left(X\right)$
-\end_inset
-
-, where the middle is 
-\begin_inset Formula $0$
-\end_inset
-
-, and the composition is identity, thus 
-\begin_inset Formula $E_{m}\left(X\right)=0$
-\end_inset
-
-.
+ works.
 \end_layout
 
 \begin_layout Standard
@@ -1617,8 +1602,8 @@ Morava E-Theory of height
 \begin_inset Formula $L_{K\left(p,n\right)}\mathbb{S}$
 \end_inset
 
- (and the Galois group, which is not finite, is called the Morava stabilizer
- group).
+ (and the Galois group, which is not finite but pro-finite, is called the
+ Morava stabilizer group).
  It has coefficients 
 \begin_inset Formula $\pi_{*}E\left(p,n\right)\cong W\left(\overline{\mathbb{F}}_{p}\right)\left\llbracket u_{1},\dotsc,u_{n-1}\right\rrbracket \left[\beta^{\pm1}\right]$
 \end_inset
@@ -1647,7 +1632,7 @@ The following statement is a formalization of the idea that
 \end_layout
 
 \begin_layout Proposition
-The following are the same:
+We have:
 \end_layout
 
 \begin_deeper
@@ -1660,7 +1645,7 @@ Being
 \begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
 \end_inset
 
--acyclic
+-acyclic is the same,
 \end_layout
 
 \begin_layout Itemize
@@ -1672,7 +1657,7 @@ Being
 \begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
 \end_inset
 
--local
+-local is the same,
 \end_layout
 
 \begin_layout Itemize
@@ -1683,7 +1668,7 @@ Being
 \begin_inset Formula $K\left(p,0\right)\vee\cdots\vee K\left(p,n\right)$
 \end_inset
 
--localization
+-localization coincide.
 \end_layout
 
 \end_deeper
